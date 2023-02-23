@@ -4,11 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!--GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!--GOOOLE FONT-->
+    <title>CartPage</title>
+    <!-- Icon script file Added -->
     <script
       src="https://kit.fontawesome.com/22bfe4a0a3.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Icon script file Added -->
     <link rel="stylesheet" href="../CSS/cart.css" />
   </head>
   <body>
@@ -16,7 +26,7 @@
       <a href="./index.html"
         ><div><i class="fa-solid fa-house"></i> ></div></a
       >
-      <a href="">DEALS ON ELECTRONIC APPLIANCES </a>
+      <a href="../HTML/product.html">Product Listing</a>
     </div>
 
     <div>
@@ -25,9 +35,9 @@
 
     <div class="parent">
       <div class="up">
-        <div><a id="a" href="./restaurant.html">Products</a></div>
+        <div><a id="a" href="../HTML/product.html">Products</a></div>
         <div>Photos</div>
-        <div>About</div>
+        <div id="about">About</div>
       </div>
 
       <div class="child">
@@ -36,16 +46,19 @@
         </div>
         <div class="right">
           <div>
-            <h2>Your order</h2>
+            <h2 id="yourOrder">Your order</h2>
           </div>
           <div>
             <h2 id="total">Total Product <span id="cart-total2">0</span></h2>
             <hr />
             <h2 id="total">Total Price <span id="cart-total">0</span></h2>
             <p>(Inc. of all taxes)</p>
+            <hr />
+
+            <button id="book">BUY NOW</button>
+
+            <hr />
           </div>
-          <hr />
-          <button id="book">BUY NOW</button>
         </div>
       </div>
     </div>
