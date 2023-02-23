@@ -48,12 +48,8 @@
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
-.price h4 {
-  color: #5a5a59;
 
-  padding-top: 16px;
-  font-family: "Poppins", sans-serif;
-}
+
 
 .price {
   background: #fff;
@@ -195,16 +191,14 @@ p {
 }
 .pagination-button button {
   margin-left: 30px;
-
+  background-color:white;
   padding: 15px;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   border-radius: 100%;
   border: none;
 }
-.pagination-button button:hover {
-  background-color: #b9f3fc;
-}
+
 
 .Card p {
   line-height: 20px;
@@ -230,28 +224,7 @@ p {
   cursor: pointer;
   font-family: inherit;
 
-  font-size: 14px;
-  border: 0px;
-  border-radius: 0px;
-  background: transparent;
-  padding: 0px;
-  font-weight: 400;
 
-  text-transform: none;
-  text-align: center;
-  text-decoration: none;
-  color: rgb(102, 102, 102);
-  font-family: "Poppins", sans-serif;
-}
-
-.Card {
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-}
-.Card:hover {
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  cursor: pointer;
-}
 
 @media screen and (min-width: 320px) and (max-width: 499px) {
   #main {
@@ -271,19 +244,4 @@ p {
     width: 100%;
   }
 
-  #filterContainer {
-    width: 100%;
-  }
-  .Card div {
-  }
-}
-@media only screen and (min-width: 500px) and (max-width: 768px) {
-  #apiProduct {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 10px;
-    row-gap: 10px;
-    margin-top: 10px;
-    margin-left: 8px;
-  }
-}
+
