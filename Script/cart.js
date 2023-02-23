@@ -1,13 +1,15 @@
-//
-
 let Cart = JSON.parse(localStorage.getItem("cart")) || [];
 let container = document.getElementById("container");
-// let total = document.getElementById("cart-total");
+let parent = document.querySelector(".parent");
+let left = document.querySelector(".left");
+
+console.log(parent);
 
 Display();
 function Display(cart) {
   container.innerHTML = "";
   let total = document.getElementById("cart-total");
+
   let msg = document.getElementById("msg");
   let change = document.getElementById("change");
   document.getElementById("cart-total2").innerText = Cart.length;
@@ -16,20 +18,17 @@ function Display(cart) {
     let card = document.createElement("div");
 
     let img = document.createElement("img");
-    img.setAttribute("src", element.foodproduct);
+    img.setAttribute("src", element.image);
 
-    let name = document.createElement("h2");
-    name.innerText = "Title:-" + element.foodproductname;
+    let name = document.createElement("h4");
+    name.innerText = element.name;
 
     let disc = document.createElement("p");
-    disc.textContent = "Discription:-" + element.foodproductdiscription;
+    disc.textContent = element.description;
 
-    let price = document.createElement("h3");
+    let price = document.createElement("h4");
+    price.innerText = `₹${element.price}`;
 
-    price.innerText = "Price:-" + Number(element.foodproductprice);
-    let category = document.createElement("h3");
-    category.textContent = "category:-" + element.foodproductcategory;
-    //
     let quantity = document.createElement("span");
     let remove = document.createElement("button");
     let Increment = document.createElement("button");
@@ -44,7 +43,6 @@ function Display(cart) {
       });
       localStorage.setItem("cart", JSON.stringify(Cart));
       Display();
-      // window.location.href = "./restaurant.html";
     });
 
     Increment.addEventListener("click", () => {
@@ -59,14 +57,13 @@ function Display(cart) {
         Display();
       }
     });
-    console.log(price);
-    // /
+
     card.append(
       img,
       name,
       disc,
       price,
-      category,
+
       Increment,
       quantity,
       decrement,
@@ -77,7 +74,7 @@ function Display(cart) {
 
   let sum = 0;
   for (let i = 0; i < Cart.length; i++) {
-    sum += Cart[i].foodproductprice * Cart[i].quantity;
+    sum += Cart[i].price * Cart[i].quantity;
     console.log(Cart[i].price);
     console.log(sum);
   }
@@ -85,6 +82,11 @@ function Display(cart) {
 
   if (total.innerText == 0) {
     alert("Your Cart is Empty");
-    msg.innerText = "Your Cart is Empty";
+    msg.innerText = "Please Place Your Order";
+  }
+  if (msg.innerText == "Please Place Your Order") {
+    parent.style.display = "none";
+  } else {
+    parent.style.display = "block";
   }
 }
