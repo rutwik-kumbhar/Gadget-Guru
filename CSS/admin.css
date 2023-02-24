@@ -15,6 +15,9 @@
 .btnlog:hover{
     background-color: red;
     color: white;
+    padding: 5px 15px;
+    border-radius: 5%;
+    border: 1px solid yellow;
 }
 
 .btnlog:active{
@@ -91,22 +94,34 @@
     cursor: pointer;
    margin-left: 40px;
    height: 40px;
-   /* background: linear-gradient(to right,#81D4FA,#1565C0); */
-   /* background: linear-gradient(to right,#eecda3,#ef629f); */
+   background: linear-gradient(to right,#81D4FA,#1565C0);
+   background: linear-gradient(to right,right,#81D4FA,#1565C0);
    border: none;
    border-radius: 9px;
    margin-top: 161px;
 
 }
+
+
+#form2{
+    margin: 30px 0 0 0;
+}
+
+#submitform1,#submitform2{
+    background-color: #006789;
+    color: white;
+}
+
 #add-modal {
-    width: 18%;
+    width: 20%;
     float:left;
     /* background: linear-gradient(to right,#81D4FA,#1565C0); */
     /* background: linear-gradient(to right,#eecda3,#ef629f); */
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* ////////////////////////////////////////////////////////////////////////////////////////////// */
     padding: 2rem;
-    margin-top: 30px;
+    margin-bottom: 100px;
+    /* margin-top: 30px; */
     position: sticky;
     top: 0;
     z-index: -0;
@@ -114,7 +129,7 @@
 
 #data-table {
     width: 100%;
-    /* float:right; */
+    float:right;
     margin-left:20px;
 }
 
@@ -181,4 +196,14 @@
 #delete:hover {
     transform: scale(1.1);
     background-color: #D50000;
+}
+
+#footer button{
+    border-radius: 5%;
+}
+
+/* ////////top-to-bottom///////// */
+
+#toptodown{
+    display: none;
 }

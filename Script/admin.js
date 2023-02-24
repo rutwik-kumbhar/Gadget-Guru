@@ -1,39 +1,8 @@
 
 let data = [];
-// console.log(data)
-async function fetchData() {
-    try {
-        let response = await fetch('https://mockapi-nr5i.onrender.com/Smartphones');
-        let jsonData = await response.json();
-        // console.log(jsonData)
-        data = jsonData;
-        renderDataTable(jsonData);
-        console.log(jsonData)
-    } catch (error) {
-        console.error(error);
-    }
-}
 
-function renderDataTable(data) {
-    let tableBody = document.getElementById('data-table-body');
-    let rows = data.map(item => {
-        let row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${item.id}</td>
-            <td> <img src="${item.image}" width="100" height="100"></td>
-            <td>${item.name}</td>
-            <td>${item.category}</td>
-            <td>${item.price}</td>
-            <td>${item.description}</td>
-            <td>
-                <button id="delete" onclick="deleteData(${item.id})">Delete</button>
-            </td>
-        `;
-        return row;
-    });
-    tableBody.innerHTML = "";
-    tableBody.append(...rows);
-}
+
+// ////////////////////////////////////////////////////////////////////////////////
 
 function showAddModal() {
     document.getElementById('add-modal').style.display = 'block';
@@ -44,42 +13,104 @@ function closeAddModal() {
     document.getElementById('add-modal').style.display = 'none';
 }
 
-    let form=document.querySelector("#add-form");
-        form.addEventListener("submit",(e)=>{
-          e.preventDefault();
-          let obj={
-            image : form.image.value,
-            name :  form.name.value,
-            price : form.number.value,
-            description : form.desc.value,
-            category : form.category.value,
-          };
-          addData(obj)
-          console.log(obj)
-        })
 
-   
 
-  async function addData(obj){
-    try {
+let registerButton=document.querySelector("#submitform1");
+registerButton.addEventListener("click", registerdeta);
+let form=document.querySelector("#add-form");
+     async function registerdeta(event){
+      event.preventDefault()
+          //  console.log(data)
+          try {
+            
+        
+              let obj={
+                image : form.image.value,
+                name :  form.name.value,
+                price : form.number.value,
+                description : form.desc.value,
+                category : form.category.value,
+            
+              // department:registerUserLevel.value
+  
+            }
+            // console.log(obj)
 
+            let register_request= await fetch(`https://mockapi-nr5i.onrender.com/Smartphones`,{
+             method:"POST",
+              headers:{ 
+                "Content-Type": 'application/json'
+              },
+              body:JSON.stringify(obj)
+            })
+             console.log(register_request)
+
+          }
+           catch (error) {
+            console.log(error)
+          }
+      }
+
+
+
+
+
+function renderCardList(cardData) {
+  let cardList = `
+    <div class="card-list">
+      ${cardData
+        .map((item) =>
+          getCard(
+            item.id,
+            item.name,
+            // item.department,
+            item.image,
+            item.price,
+            item.category,
+            item.description
+          )
+        )
+        .join("")}
+    </div>
+  `;
+
+  mainSection=document.querySelector("#data-table-body");
+  mainSection.innerHTML = cardList;
+
+  
+}
+
+function getCard(id, name, image,number,category,desc) {
+  let card = `
+        <tr>
+            <td>${id}</td>
+            <td><img src="${image}" height="100" width="100"></td>
+            <td>${name}</td>
+            <td>${category}</td>
+            <td>${number}</td>
+            <td>${desc}</td>
+            <td><button id="delete" onclick="deleteData(${id})">Delete</button></td>
+        </tr>
+  `;
+  return card;
+}
+
+
+async function fetchData(){
+   try {
+    let get_employee= await fetch(`https://mockapi-nr5i.onrender.com/Smartphones`);
+    let data = await get_employee.json();
+
+    renderCardList(data)
+    console.log(data)
       
-    await fetch(`https://mockapi-nr5i.onrender.com/Smartphones`,{ 
-      method:'POST',
-      headers:{
-            "Content-Type": 'application/json'
-      },
-      body:JSON.stringify(obj)
-      
-    })
-    
-    alert("added successfully!");
-    
-    }
-     catch (error) {
-      console.log(error)
-    }
-  }
+   }
+    catch (error) {
+      console.log(error);
+   }
+    document.querySelector("#footer").style="block";
+    document.querySelector("#toptodown").style.display="block";
+}
 
 
 
@@ -139,3 +170,4 @@ async function deleteData(id) {
         }
 
    });
+
