@@ -11,6 +11,9 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Hello, world!</title>
 </head>
@@ -34,7 +37,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-danger">
         <div class="container-fluid">
-            <a class="navbar-brand" style="margin-right: 300px;" href="#">Masai Digital</a>
+            <a class="navbar-brand" style="margin-right: 180px;" href="#">Masai Digital</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -48,25 +51,89 @@
                     </form>
                 </div>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <li class="nav-item" id="cart" style="display: block;">
                         <a class="nav-link active me-4" aria-current="page" href="#">Cart <span
                                 class="badge bg-secondary">4</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Login</a>
+                        <button class="btn btn-primary mx-1" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary mx-1" data-bs-toggle="modal"
+                            data-bs-target="#signinModal">Signin</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Login Modal started -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control w-75" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control w-75" id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign In  Modal started -->
+    <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signinModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control w-75" id="email" aria-describedby="emailHelp"
+                                required>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="number" class="form-label">Mobile Number</label>
+                            <input type="number" class="form-control w-75" id="password" aria-describedby="emailHelp"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control w-75" id="exampleInputPassword1" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!------------------------------ Sub Navbar Strated Here ------------------------------->
 
     <div class="dropdown">
         <ul class="nav justify-content-evenly">
             <li class="nav-item ">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
-                    aria-current="page" href="#">MOBILES & TABLETS</a>
+                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false" aria-current="page" href="#">MOBILES & TABLETS</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -74,7 +141,8 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" href="#" tabindex="-1">ELECTROICS</a>
+                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false" href="#" tabindex="-1">ELECTROICS</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -82,7 +150,8 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" href="#">KITCHEN APPLIANCES</a>
+                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false" href="#">KITCHEN APPLIANCES</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -90,7 +159,8 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" href="#">HOME APPLIANCES</a>
+                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false" href="#">HOME APPLIANCES</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -98,7 +168,8 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" href="#" tabindex="-1" aria-disabled="true">ACCESSORIES</a>
+                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false" href="#" tabindex="-1" aria-disabled="true">ACCESSORIES</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -106,7 +177,8 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" href="#" tabindex="-1" aria-disabled="true">PERSONAL CARE</a>
+                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false" href="#" tabindex="-1" aria-disabled="true">PERSONAL CARE</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -120,42 +192,311 @@
 
 
 
-    <!---------------------------- carousel slide Strated Here --------------------------->
-
+    <!---------------------------- carousel slide 1 Strated Here --------------------------->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
+        <div class="carousel-indicators" data-interval="1000">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                 aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                 aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-interval="1000">
+                <img src="https://www.reliancedigital.in/medias/Boat-Carousel-Banner-21-02-2023.jpg?context=bWFzdGVyfGltYWdlc3w4MjA3NnxpbWFnZS9qcGVnfGltYWdlcy9oOWEvaGU5Lzk5NjQ0NzI0Njc0ODYuanBnfGRmZTU1OTA2NmY5MDI3YjliMGY4NzRiZDg4ZGM1MWJiN2JjN2YxN2EzODExYmEwMDM0NThkNTJmZDQ4MmU5YTQ"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="1000">
+                <img src="https://www.reliancedigital.in/medias/Clearance-Sale-on-Everyday-Appliances-Carousel-Banner-Desktop.jpg?context=bWFzdGVyfGltYWdlc3w5MjQ3MHxpbWFnZS9qcGVnfGltYWdlcy9oMDkvaDljLzk5NjQzMzk4ODgxNTguanBnfDNjODg3NzQ1NjYyYjk5ZWQyNWI4Mjk5YWI5YzMxMWI3ZWEzOGUwMTZhZThjY2YzODRmOGJkODgzOTUxNjc0Mzc"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="1000">
                 <img src="https://www.reliancedigital.in/medias/Samsung-Galaxy-S23-Series-CLP-Banner-Desktop.jpg?context=bWFzdGVyfGltYWdlc3w5NjUyNnxpbWFnZS9qcGVnfGltYWdlcy9oZjcvaDQ5Lzk5NjA4ODU3ODA1MTAuanBnfGRkM2Y5OTExODVjYzYwNmY2ZWFhMDRjZDUzODhjMTAwNWRjNjQ5Yjg0NmI2ZTQzZGQ0MDViNmNhMTg2ZDJkZDc"
                     class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
-                <img src="https://www.reliancedigital.in/medias/Samsung-Galaxy-S23-Series-CLP-Banner-Desktop.jpg?context=bWFzdGVyfGltYWdlc3w5NjUyNnxpbWFnZS9qcGVnfGltYWdlcy9oZjcvaDQ5Lzk5NjA4ODU3ODA1MTAuanBnfGRkM2Y5OTExODVjYzYwNmY2ZWFhMDRjZDUzODhjMTAwNWRjNjQ5Yjg0NmI2ZTQzZGQ0MDViNmNhMTg2ZDJkZDc"
+            <div class="carousel-item" data-interval="1000">
+                <img src="https://www.reliancedigital.in/medias/OnePlus-Buds-Pro-2-CLP-Banner-14-02-2023.jpg?context=bWFzdGVyfGltYWdlc3w1NTEwN3xpbWFnZS9qcGVnfGltYWdlcy9oMGYvaDE3Lzk5NjA4ODU2NDk0MzguanBnfGI5ZTY2YWFhMmVmOWQ2N2YwZTcwM2JkODBmYzRlZWJjMWIxYjkxN2FkMWFlOTkyZTk5MGQ3OGE2OWI2NDI4Mjg"
                     class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
-                <img src="https://www.reliancedigital.in/medias/Samsung-Galaxy-S23-Series-CLP-Banner-Desktop.jpg?context=bWFzdGVyfGltYWdlc3w5NjUyNnxpbWFnZS9qcGVnfGltYWdlcy9oZjcvaDQ5Lzk5NjA4ODU3ODA1MTAuanBnfGRkM2Y5OTExODVjYzYwNmY2ZWFhMDRjZDUzODhjMTAwNWRjNjQ5Yjg0NmI2ZTQzZGQ0MDViNmNhMTg2ZDJkZDc"
+            <div class="carousel-item" data-interval="1000">
+                <img src="https://www.reliancedigital.in/medias/Televisions-Carousel-Banner-03-02-2023.jpg?context=bWFzdGVyfGltYWdlc3w5NTA1NXxpbWFnZS9qcGVnfGltYWdlcy9oOTQvaGRmLzk5NTc2NTM2MTA1MjYuanBnfDZhZmEzYzdjNDcxNGQ0NjkxYjgxNzIyN2U1YWQxNjZiNTc1Y2Y5ODI5YzBmNjJmOWIxNDFjYmI0Y2M4Zjg5Y2I"
                     class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon slider-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon slider-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+    <!---------------------------- carousel product slide Strated Here --------------------------->
+
+    <div class="blank"></div>
+
+    <div class="container">
+        <h4>Special Offers</h4>
+        <div id="carouselProductSlider" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselProductSlider" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselProductSlider" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselProductSlider" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container slider-product">
+                        <div class="row text-center">
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
+                                    alt="error">
+                                <h4>boAt Flash Edition Smart Watch </h4>
+                                <h6>Price : <span>₹1299</span></h6>
+                                <h6>M.R.P : 2999</h6>
+                                <h6>You Save : 67%(₹1991)</h6>
+                            </div>
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/boAt-Airdopes-138-Airdopes-491973383-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0NTY1fGltYWdlL2pwZWd8aW1hZ2VzL2gyMS9oNDAvOTkwNDQ4NjY3ODU1OC5qcGd8OGMyZjU0OGZmN2RmMDg5ZGQwNzU1ZjAyMmE1YWMxNWQ5NDU4MzdkZmRmNTQ0ZDI3N2I4Nzg5YzJmMjgwMDA3Mw"
+                                    alt="error">
+                                <h4>boAt Airdopes 138 Twin Wireless</h4>
+                                <h6>Price : <span>₹999</span></h6>
+                            </div>
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/Boat-Rockerz-235-V2-Earphones-492579328-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxMTQwNXxpbWFnZS9qcGVnfGltYWdlcy9oNmUvaDdjLzk3NjUzNzM0MTEzNTguanBnfDk1MDg1YmQ4MzFlYTIxZTE4NGExMDZkYjdjMmQwODllNzkyNTQxNGY1YTIwNDY3NjM3NzI3N2EwNjdhZDhiZjU"
+                                    alt="error">
+                                <h4>boAt Rockerz 235V2  bluetooth Wirelesse</h4>
+                                <h6>Price : <span>5000</span></h6>
+                            </div>
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
+                                    alt="error">
+                                <h4>Product Name</h4>
+                                <h6>Price : <span>5000</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container slider-product">
+                        <div class="row text-center">
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
+                                    alt="error">
+                                <h4>Product Name</h4>
+                                <h6>Price : <span>5000</span></h6>
+                            </div>
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
+                                    alt="error">
+                                <h4>Product Name</h4>
+                                <h6>Price : <span>5000</span></h6>
+                            </div>
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
+                                    alt="error">
+                                <h4>Product Name</h4>
+                                <h6>Price : <span>5000</span></h6>
+                            </div>
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
+                                    alt="error">
+                                <h4>Product Name</h4>
+                                <h6>Price : <span>5000</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container slider-product">
+                        <div class="row text-center">
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
+                                    alt="error">
+                                <h4>Product Name</h4>
+                                <h6>Price : <span>5000</span></h6>
+                            </div>
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
+                                    alt="error">
+                                <h4>Product Name</h4>
+                                <h6>Price : <span>5000</span></h6>
+                            </div>
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
+                                    alt="error">
+                                <h4>Product Name</h4>
+                                <h6>Price : <span>5000</span></h6>
+                            </div>
+                            <div class="col">
+                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
+                                    alt="error">
+                                <h4>Product Name</h4>
+                                <h6>Price : <span>5000</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductSlider"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon slider-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProductSlider"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon slider-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="blank"></div>
+
+
+    <div class="container container-deals">
+        <h3>Great Deals on Electronics</h3>
+        <div class="row text-center">
+            <div class="col">
+                <img src="https://www.reliancedigital.in/medias/Motorola-Moto-G42-Small-Banner-28-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wyOTkyNXxpbWFnZS9qcGVnfGltYWdlcy9oZWUvaGNmLzk5NTg4MjY2MzkzOTAuanBnfDU2YTBjMmZhZmYzODEzMjBhNGM0ZWFhODNjZjEyNzMyNDQyZTZiYTc2ZDZkNGMzNmY5MmNkN2Q4OTRjZDRmMjI"
+                    alt="">
+            </div>
+            <div class="col">
+                <img src="https://www.reliancedigital.in/medias/OnePlus-TVs-12999-Small-Banner-03-02-2023.jpg?context=bWFzdGVyfGltYWdlc3wzODc4N3xpbWFnZS9qcGVnfGltYWdlcy9oNGIvaDc1Lzk5NTc2NTM3NzQzNjYuanBnfDQ3ZmNhYWNjYjQ4ZjUxMjkzYjJmNzM2YjNhYjYxMWQxNjExNzMzMWI1ZjQ0ZTYzMGNmMDhiNDljMWIzNmFhZDg"
+                    alt="">
+            </div>
+            <div class="col">
+                <img src="https://www.reliancedigital.in/medias/Smartwatches-Small-Banner-28-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wzMTY3M3xpbWFnZS9qcGVnfGltYWdlcy9oNTEvaGY3Lzk5Mzc4OTUyOTI5NTguanBnfDQ2NzM2YjAxZTkzYmJiMTNlMjk4ODkxNTNlMTczMDcxYzU4NjMzZDZmNWQ3N2I5MGViNmMzZDAwNjExMmUxNTE"
+                    alt="">
+            </div>
+            <div class="col">
+                <img src="https://www.reliancedigital.in/medias/Neckband-True-Wireless-Small-Banner-28-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wzMjg5OHxpbWFnZS9qcGVnfGltYWdlcy9oNzYvaDE2Lzk5Mzc4OTUwOTYzNTAuanBnfGE1OTcxMTM4NGUyMjU3MmM4NTc4YTI1NThkMmQwOTc1ZDU2N2YwNjRjMWNiZTU2YjZiMzcwOTVkYjc0MzQ4MDc"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------- carousel slide 2 Strated Here --------------------------->
+
+    <div class="blank"></div>
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampl" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.reliancedigital.in/medias/Motorola-e13-CLP-Banner-15-02-2023.jpg?context=bWFzdGVyfGltYWdlc3w4MTQyNXxpbWFnZS9qcGVnfGltYWdlcy9oMGMvaDA2Lzk5NjE4ODU5MjU0MDYuanBnfDEyNWRjNWU0MjVjZTU2YzBiMDk5MWNkNWM4NzE1YjdiN2I0NTE1OWE4NDYyNzQyNDM1N2YxODlhMWI3MTkxMjk"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.reliancedigital.in/medias/One-Plus-11-CLP-Desktop.jpg?context=bWFzdGVyfGltYWdlc3w3MDM0OHxpbWFnZS9qcGVnfGltYWdlcy9oMDQvaGUwLzk5NjI2MTEzMTA2MjIuanBnfGIxYTZiNzVkMjE4ZmEyY2E1NDQxMWExYWZkNGUzYTQyZDNiZTMxMWI5YmM2NWJmMjhkZWQzNzFhMjQ1ZTk5NzY"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.reliancedigital.in/medias/JBL-CLP-Banner-21-02-2023.jpg?context=bWFzdGVyfGltYWdlc3wxNDY4ODh8aW1hZ2UvanBlZ3xpbWFnZXMvaDUyL2gwYS85OTY0MzM5NzU3MDg2LmpwZ3w0ZWQxMjlkMjIxMjEzMGQ1MjMyM2Q2OTY3Mjk4ZTI3MDMwY2Q2Y2Y4M2NiMjQzMzY3YzE4OTQzMGYyMGMyYzc3"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.reliancedigital.in/medias/GOVO-Gosurround-900-CLP-Banner-03-02-2023.jpg?context=bWFzdGVyfGltYWdlc3w3NTU5OHxpbWFnZS9qcGVnfGltYWdlcy9oMDgvaDMwLzk5NjA3OTg5NDUzMTAuanBnfDczZjA1MjFhY2Q3MTEzOWUyMDE1MzRiODYwNWM5OTNjYjFhODM0NWYwYzY4NDgzOWJkNjY1MmQ1NjgzZWM0N2Y"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.reliancedigital.in/medias/Apple-HomePod-Buy-now-CLP-Banner-31-01-2023-01.jpg?context=bWFzdGVyfGltYWdlc3wxMTE5OTJ8aW1hZ2UvanBlZ3xpbWFnZXMvaDZkL2g2NS85OTU2OTk4MTE5NDU0LmpwZ3xjYjc3ZmY0NmNkNDMwZjU3NGJiMzFkOTY0NTFjOWUwN2YzY2E5ODA5NDk3NTc0ZjI3MzIxMDQ0OGM5Yzg1ZGQ3"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon slider-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon slider-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!---------------------------- Footer Started Here --------------------------->
+    <div class="blank"></div>
+    <div class="container-fluid pt-4" id="footer">
+        <div class="row d-flex justify-content-center">
+            <div class="col">
+                <h5>PRODUCT CATEGORIES</h5>
+                <h6><a href="">Smartphones</a></h6>
+                <h6><a href="">Laptops</a></h6>
+                <h6><a href="">DSLR Cameras</a></h6>
+                <h6><a href="">Televisions</a></h6>
+                <h6><a href="">Air Conditioners</a></h6>
+                <h6><a href="">Refrigerators</a></h6>
+                <h6><a href="">Kitchen Appliances</a></h6>
+            </div>
+            <div class="col">
+                <h5>PRODUCT CATEGORIES</h5>
+                <h6><a href="">Smartphones</a></h6>
+                <h6><a href="">Laptops</a></h6>
+                <h6><a href="">DSLR Cameras</a></h6>
+                <h6><a href="">Televisions</a></h6>
+                <h6><a href="">Air Conditioners</a></h6>
+                <h6><a href="">Refrigerators</a></h6>
+                <h6><a href="">Kitchen Appliances</a></h6>
+            </div>
+            <div class="col">
+                <h5>PRODUCT CATEGORIES</h5>
+                <h6><a href="">Smartphones</a></h6>
+                <h6><a href="">Laptops</a></h6>
+                <h6><a href="">DSLR Cameras</a></h6>
+                <h6><a href="">Televisions</a></h6>
+                <h6><a href="">Air Conditioners</a></h6>
+                <h6><a href="">Refrigerators</a></h6>
+                <h6><a href="">Kitchen Appliances</a></h6>
+            </div>
+            <div class="col">
+                <h5>PRODUCT CATEGORIES</h5>
+                <h6><a href="">Smartphones</a></h6>
+                <h6><a href="">Laptops</a></h6>
+                <h6><a href="">DSLR Cameras</a></h6>
+                <h6><a href="">Televisions</a></h6>
+                <h6><a href="">Air Conditioners</a></h6>
+                <h6><a href="">Refrigerators</a></h6>
+                <h6><a href="">Kitchen Appliances</a></h6>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container-fluid footer-image pt-4 pb-4">
+        <div class="row">
+            <div class="col-3">
+                <h5>FOLLOW US</h5>
+                <i class="fa-brands fa-square-facebook" class="s"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="col-9">
+                <h5>EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h5>
+                <img src="https://www.reliancedigital.in/build/client/images/google_play_store.png" alt="">
+                <img src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="./Script/index.js"></script>
 </body>
 
 </html>
