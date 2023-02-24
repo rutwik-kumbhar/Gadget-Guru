@@ -20,13 +20,13 @@ function Display(cart) {
     let img = document.createElement("img");
     img.setAttribute("src", element.image);
 
-    let name = document.createElement("h4");
+    let name = document.createElement("h5");
     name.innerText = element.name;
 
     let disc = document.createElement("p");
     disc.textContent = element.description;
 
-    let price = document.createElement("h4");
+    let price = document.createElement("h5");
     price.innerText = `₹${element.price}`;
 
     let quantity = document.createElement("span");

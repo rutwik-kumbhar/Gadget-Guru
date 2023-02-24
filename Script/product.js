@@ -90,10 +90,8 @@ function getButton(text, id) {
 
 let GO = document.querySelector(".GO");
 let min = document.querySelector(".min");
-  let max = document.querySelector(".max");
+let max = document.querySelector(".max");
 GO.addEventListener("click", function () {
-  
-
   if (min && max) {
     let filterData = paginationData.filter((el) => {
       if (el.price >= +min.value && el.price <= +max.value) {
@@ -282,7 +280,6 @@ desc.addEventListener("click", function () {
 let cartarr = JSON.parse(localStorage.getItem("cart")) || [];
 setTimeout(() => {
   let addToCart = document.querySelectorAll(".AddToCart");
-
   addToCart.forEach((Btn) => {
     Btn.addEventListener("click", () => {
       btnClicked(Btn);
@@ -315,10 +312,10 @@ function checkProduct(element) {
   return true;
 }
 
-let range=document.getElementById("volume")
-let rangeMin=document.querySelector(".rangeMin")
+let range = document.getElementById("volume");
+let rangeMin = document.querySelector(".rangeMin");
 
-range.addEventListener("change",function(){
-   rangeMin.innerText=`₹${range.value}`
-   min.getAttribute("placeholder").value=`₹${range.value}`
-})
+range.addEventListener("change", function () {
+  rangeMin.innerText = `₹${range.value}`;
+  min.getAttribute("placeholder").value = `₹${range.value}`;
+});

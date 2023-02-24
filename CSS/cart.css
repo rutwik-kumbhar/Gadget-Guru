@@ -35,6 +35,7 @@
   margin-left: 80px;
 
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 .up {
   display: flex;
@@ -126,6 +127,10 @@
   font-family: "Poppins", sans-serif;
   text-align: center;
   background-color: #e0e0e0;
+  margin-bottom: 10px;
+}
+.right h2 {
+  margin-left: 80px;
 }
 
 .right p {
@@ -135,12 +140,14 @@
 }
 
 #cart-total2 {
+  margin-top: 10px;
   margin-left: 120px;
   font-family: "Poppins", sans-serif;
 }
 #cart-total {
   margin-left: 100px;
   font-family: "Poppins", sans-serif;
+  font-size: 30px;
 }
 
 #total {
@@ -163,6 +170,27 @@
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   cursor: pointer;
+}
+#footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-image,
+#footer {
+  background-color: #003380;
+  color: white;
+  padding-left: 60px;
+}
+
+.footer-image > div img {
+  width: 100px;
+}
+.footer-image > div i {
+  font-size: 30px;
+}
+.footer-image > div i:hover {
+  color: blue;
 }
 
 @media only screen and (min-width: 500px) and (max-width: 768px) {
