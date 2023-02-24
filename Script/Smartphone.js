@@ -3,8 +3,9 @@ let dataArray = [];
 let paginationData = [];
 let categoryData = [];
 let Page = 1;
+let ApiUrl=`https://mockapi-nr5i.onrender.com/Smartphones`
 fetchRender(1);
-fetch(`https://63f4973b55677ef68bbf571a.mockapi.io/reliance`)
+fetch(`${ApiUrl}`)
   .then((request) => {
     return request.json();
   })
@@ -13,9 +14,10 @@ fetch(`https://63f4973b55677ef68bbf571a.mockapi.io/reliance`)
     showPagination(data.length, 6);
   });
 
+
 function fetchRender(pagenumber) {
   fetch(
-    `https://63f4973b55677ef68bbf571a.mockapi.io/reliance?completed=false&page=${pagenumber}&limit=6`
+    `${ApiUrl}?completed=false&page=${pagenumber}&limit=6`
   )
     .then((request) => {
       // let totalusers=request.headers.get("X-Total-Count")
@@ -319,6 +321,13 @@ let range=document.getElementById("volume")
 let rangeMin=document.querySelector(".rangeMin")
 
 range.addEventListener("change",function(){
+  let filterData = dataArray.filter((el) => {
+    if (el.price>=range.value  && el.price<=334565) {
+      return true;
+    }
+  });
+  display(filterData);
+
    rangeMin.innerText=`₹${range.value}`
-   min.getAttribute("placeholder").value=`₹${range.value}`
+  
 })
