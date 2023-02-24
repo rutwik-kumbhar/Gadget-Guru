@@ -44,47 +44,65 @@
  
          <!-- ///////////////////////////form page///////////////////////////////////// -->
 
-        <div id="main">
-            <div id="box1">
-                <h3>Add-item</h3>
-                <div id="form">
-                 <span>Name</span><br>
-                 <input type="text" id="name"><br>
-                 <span>Image</span><br>
-                 <input type="text" id="iamge"><br>
-                 <span>Category</span><br>
-                 <input type="text" id="category"><br>
-                 <span>Price</span><br>
-                 <input type="number" id="number"><br>
-                 <span>Description</span><br>
-                 <input type="text" id="desc"><br>
-                 <!-- <span>Submit</span><br> -->
-                 <button>Submit</button>
-  
-                </div>
-           </div>
-           <div id="box2">
-                 <button>Total Product</button>
+         <div id="add-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeAddModal()">&times;</span>
+                <h3>Add Item</h3>
+                <form id="add-form">
 
-                 <table id="table-data">
-                     <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Image</th>
-                            <th>Name</th>
-                            <th>Category</th>
-                            <th>Price</th>
-                            <th>Description</th>
-                            <th>Delete</th>
-                        </tr>
-                     </thead>
-                     <tbody id="tbody"></tbody>
-                 </table>
+                    <label for="Image">Image:</label>
+                    <input style="border-radius: 12px;" type="url" id="image" required><br>
+                    <label for="name">Name:</label>
+                    <input style="border-radius: 12px;" type="text" id="name" required><br>
+                    <label for="category">category:</label>
+                    <input style="border-radius: 12px;" type="text" id="category" required><br>
+                    <label for="number">Price:</label>
+                    <input style="border-radius: 12px;" type="text" id="number" required><br>
+                    <label for="Description">Description:</label>
+                    <input style="border-radius: 12px;" type="text" id="desc" required><br>
+                
+                    <input style="border-radius: 12px;" type="submit" value="Submit" onclick="addData()">
+                    <!-- <input type="submit" value="edit" onclick="editData()"> -->
+                </form>
 
-           </div>
+
+             <!-- /////////////////////////////////UPDATE-PRICE/////////////////////////////////////// -->
+
+                  <!-- <details value="update"> -->
+                    <form action="updateSalary" id="form2">
+                        <h3>Update Price</h3>
+                        <label>Product Id:</label><br>
+                        <input style="border-radius: 12px;" type="number" id="Product_id" required><br>
+                        <label>Price</label><br>
+                        <input style="border-radius: 12px;" type="number" id="update_price" required><br>
+                        <input style="border-radius: 12px;" type="submit" value="Submit">
+           
+                      </form>
+                  <!-- </details> -->
+            </div>
         </div>
-
-
+    
+    <div class="btn">
+        <button id="fetch-data-button" onclick="fetchData()">Total Products</button>
+            <button id="add-data-button" onclick="showAddModal()">Add Product</button>
+    </div>
+    
+        <div class="admin-page">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table-body"></tbody>
+            </table>
+        </div>
 
 
     

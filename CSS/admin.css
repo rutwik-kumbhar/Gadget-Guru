@@ -1,4 +1,3 @@
-
 .form-control{
     width: 300px;
 }
@@ -34,73 +33,152 @@
     z-index: 1;
 }
 
-/* ///////////////////////// */
-/* #box1{
+/* //////////////////////////////////////////////////////////// */
 
-} */
 
-#box1{
-    border: 1px solid black;
-    width: 260px;
-    height: 450px;
-    display: grid;
-    justify-content: space-between;
-}
-
-#box1>h3,#form{
-    position: relative;
-    margin: 4% 0 20% 20%;
-}
-#main{
+.admin-page {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+
+
+    margin-top:230px;
+
+    position: relative;
+    margin-left: 233px;
+
 }
 
-/* /////////////////////////box2//////////////// */
-#box2{
-  
-    width:70%;
-    margin-left:5%;
-    margin: 20px auto;
+#fetch-data-button {
+    width: 40%;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+/* for zoom in ...........*/
+#fetch-data-button:focus {
+    outline: none;
 }
 
-#box2 button{
-    margin: 5% 40%;
-    padding: 5px 40px;
+#fetch-data-button:hover {
+    transform: scale(1.1);
+} 
+/* end here........... */
+#add-data-button{
+    width: 40%;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+#add-data-button:focus {
+    outline: none;
 }
 
-#table-data{
+#add-data-button:hover {
+    transform: scale(1.1);
+} 
+
+.btn{
+    height: 40px;
+    margin-left: 300px;
+    display: flex;
+    padding: 20px;
+}
+#fetch-data-button,#add-data-button{
+    cursor: pointer;
+   margin-left: 40px;
+   height: 40px;
+   /* background: linear-gradient(to right,#81D4FA,#1565C0); */
+   /* background: linear-gradient(to right,#eecda3,#ef629f); */
+   border: none;
+   border-radius: 9px;
+   margin-top: 161px;
+
+}
+#add-modal {
+    width: 18%;
+    float:left;
+    /* background: linear-gradient(to right,#81D4FA,#1565C0); */
+    /* background: linear-gradient(to right,#eecda3,#ef629f); */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+    padding: 2rem;
+    margin-top: 30px;
+    position: sticky;
+    top: 0;
+    z-index: -0;
+}
+
+#data-table {
     width: 100%;
-    /* border-collapse: collapse; */
-    margin-left: 20px;
+    /* float:right; */
+    margin-left:20px;
 }
 
+#add-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+}
 
-#table-data th,#table-data td{
-    border: 1px solid black;
+#add-form label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+#add-form input {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#data-table th, #data-table td {
+    border: 2px solid rgb(0, 0, 35);
     padding: 8px;
 }
 
-#box1 button{
-    margin:10% auto 0% 30%;
-    padding: 0% 10%;
+#data-table th {
+    background-color: #f2f2f2;
 }
 
-/* //////button delete//// */
+#data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-#tbody button{
-    margin-left:0px;
-    padding: 5% 10px;
+#data-table tr:hover {
+    background-color: #ddd;
+}
+
+#data-table th {
+    text-align: left;
+}
+
+.close{
+    cursor: pointer;
+}
+#delete{
+    border: 1px solid red;
+    width: 107%;
+    height: 34px;
+    cursor: pointer;
     background-color: red;
-    color: white;
     border: none;
-    border-radius: 5%;
+    color: whitesmoke;
+    border-radius: 4px;
+}
+ #delete:focus {
+    outline: none;
 }
 
-#tbody button:hover{
-    background-color: rgb(233, 102, 102);
-    padding:10% 10px
-}
-
-#tbody button:active{
-    background-color: rgb(100, 32, 32);
+#delete:hover {
+    transform: scale(1.1);
+    background-color: #D50000;
 }
