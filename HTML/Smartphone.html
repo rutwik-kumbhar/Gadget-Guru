@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/Smartphone.css" />
+
+    <!--GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!--GOOOLE FONT-->
+    <title>Product</title>
+  </head>
+  <body>
+    <div id="main">
+      <!--Filter Container-->
+      <div id="filterContainer">
+        <h3>FILTER</h3>
+        <div class="price">
+          <h4>Price</h4>
+          <input type="range" id="volume" 
+         min="15000" max="334565" step="1">
+         
+  <label style="font-family: Poppins, sans-serif;" >Price</label>
+  <br>
+  
+  <span class="rangeMin"style="margin-right: 180px;" >₹15000</span> <span>₹334565</span>
+  <br>
+  <br>
+   
+          <input type="number" placeholder="Min" class="min" />
+          <span>to</span>
+          <input type="number" placeholder="Max" class="max" />
+          <button class="GO">GO</button>
+        </div>
+
+        <div class="category">
+          <h4>Category</h4>
+
+          <input type="checkbox" id="Cable&Cards" value="Cable" />
+          <label>Cable & Cards</label><br />
+          <input type="checkbox" id="Headphone" value="Headphone" />
+          <label>Headphone & Headset</label><br />
+          <input type="checkbox" id="Smartphone" value="Smartphone" />
+          <label>Smartphones</label> <br />
+          <input type="checkbox" id="Computer" value="Computer" />
+          <label>Computer & Cables</label>
+        </div>
+
+        <div class="brand">
+          <h4>Brand</h4>
+
+          <input type="checkbox" id="Apple" value="Apple" />
+          <label>Apple</label><br />
+          <input type="checkbox" id="Boat" value="Boat" />
+          <label>bOAT</label><br />
+          <input type="checkbox" id="Ptron" value="Ptron" />
+          <label>Ptron</label> <br />
+          <input type="checkbox" id="Realme" value="Realme" />
+          <label>Realme</label>
+        </div>
+      </div>
+
+      <!------------------------------------Product Conatainer----------------------->
+      <div id="productContainer">
+        <div class="title">
+          <h1 class="titleproduct">Product</h1>
+          <span>Sort By:</span>
+          <span class="asc">Price(Low To High)</span>
+          <span class="desc">Price(Hight To Low)</span>
+        </div>
+
+        <div id="apiProduct"></div>
+        <div class="pagination-button"></div>
+      </div>
+    </div>
+
+       <!---------------------------- Footer Started Here --------------------------->
+    <div class="blank"></div>
+    <div class="container-fluid pt-4" id="footer">
+        <div class="row d-flex justify-content-center">
+            <div class="col">
+                <h5>PRODUCT CATEGORIES</h5>
+                <h6><a href="">Smartphones</a></h6>
+                <h6><a href="">Laptops</a></h6>
+                <h6><a href="">DSLR Cameras</a></h6>
+                <h6><a href="">Televisions</a></h6>
+                <h6><a href="">Air Conditioners</a></h6>
+                <h6><a href="">Refrigerators</a></h6>
+                <h6><a href="">Kitchen Appliances</a></h6>
+            </div>
+            <div class="col">
+                <h5>PRODUCT CATEGORIES</h5>
+                <h6><a href="">Smartphones</a></h6>
+                <h6><a href="">Laptops</a></h6>
+                <h6><a href="">DSLR Cameras</a></h6>
+                <h6><a href="">Televisions</a></h6>
+                <h6><a href="">Air Conditioners</a></h6>
+                <h6><a href="">Refrigerators</a></h6>
+                <h6><a href="">Kitchen Appliances</a></h6>
+            </div>
+            <div class="col">
+                <h5>PRODUCT CATEGORIES</h5>
+                <h6><a href="">Smartphones</a></h6>
+                <h6><a href="">Laptops</a></h6>
+                <h6><a href="">DSLR Cameras</a></h6>
+                <h6><a href="">Televisions</a></h6>
+                <h6><a href="">Air Conditioners</a></h6>
+                <h6><a href="">Refrigerators</a></h6>
+                <h6><a href="">Kitchen Appliances</a></h6>
+            </div>
+            <div class="col">
+                <h5>PRODUCT CATEGORIES</h5>
+                <h6><a href="">Smartphones</a></h6>
+                <h6><a href="">Laptops</a></h6>
+                <h6><a href="">DSLR Cameras</a></h6>
+                <h6><a href="">Televisions</a></h6>
+                <h6><a href="">Air Conditioners</a></h6>
+                <h6><a href="">Refrigerators</a></h6>
+                <h6><a href="">Kitchen Appliances</a></h6>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container-fluid footer-image pt-4 pb-4">
+        <div class="row">
+            <div class="col-3">
+                <h5>FOLLOW US</h5>
+                <i class="fa-brands fa-square-facebook" class="s"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="col-9">
+                <h5>EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h5>
+                <img src="https://www.reliancedigital.in/build/client/images/google_play_store.png" alt="">
+                <img src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" alt="">
+            </div>
+        </div>
+    </div>
+
+   
+  </body>
+</html>
+<script src="../Script/Smartphone.js"></script>
