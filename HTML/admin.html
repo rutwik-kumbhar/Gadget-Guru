@@ -34,13 +34,13 @@
             <a class="navbar-brand" style="margin-right: 300px;" href="#">Gadget Guru</a>
             
                    <h3 style="margin-left: -12em; color: white;">Admin-Page</h3>
-                <button class="btnlog" >Log-in</button>
+                <button class="btnlog" >Log-out</button>
                 
             </div>
         </div>
     </nav>
 
-
+             
  
          <!-- ///////////////////////////form page///////////////////////////////////// -->
 
@@ -61,30 +61,32 @@
                     <label for="Description">Description:</label>
                     <input style="border-radius: 12px;" type="text" id="desc" required><br>
                 
-                    <input style="border-radius: 12px;" type="submit" value="Submit" onclick="addData()">
+                    <input style="border-radius: 12px;" type="submit" id="submitform1" value="Submit">
+                    <!-- <input style="border-radius: 12px;" type="submit" id="submitform1" value="Submit" onclick="addData()"> -->
                     <!-- <input type="submit" value="edit" onclick="editData()"> -->
                 </form>
 
 
              <!-- /////////////////////////////////UPDATE-PRICE/////////////////////////////////////// -->
 
-                  <!-- <details value="update"> -->
+                  
                     <form action="updateSalary" id="form2">
                         <h3>Update Price</h3>
                         <label>Product Id:</label><br>
-                        <input style="border-radius: 12px;" type="number" id="Product_id" required><br>
+                        <input style="border-radius: 12px; width: 200px; height: 40px;" type="number" id="Product_id" required><br>
                         <label>Price</label><br>
-                        <input style="border-radius: 12px;" type="number" id="update_price" required><br>
-                        <input style="border-radius: 12px;" type="submit" value="Submit">
+                        <input style="border-radius: 12px; width: 200px; height: 40px;" type="number" id="update_price" required><br>
+                        <input style="border-radius: 12px; width: 200px; height: 40px; margin: 20px 0;" type="submit" value="Submit" id="submitform2">
            
                       </form>
-                  <!-- </details> -->
+                 
             </div>
         </div>
     
     <div class="btn">
         <button id="fetch-data-button" onclick="fetchData()">Total Products</button>
             <button id="add-data-button" onclick="showAddModal()">Add Product</button>
+            <button id="toptodown" style=" font-size:xx-large; font-weight: bold; font-size: 80px;"><a href="#footer">&#8609;</a></button>
     </div>
     
         <div class="admin-page">
@@ -106,7 +108,7 @@
 
 
     
-       
+       <footer id="footer" style="margin:50px 0 20px 20px; display: none; "><a href="#add-data-button"><button id="bottomtotop" style="padding: 10px; background-color: red; color: white; border: none; font-weight:bold">bottom to top</button></a></footer>
 </body>
 <script src="../Script/admin.js"></script>
 </html>
