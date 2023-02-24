@@ -77,16 +77,16 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="log-in">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control w-75" id="exampleInputEmail1"
+                            <input type="email" class="form-control w-75" id="loginEmail"
                                 aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control w-75" id="exampleInputPassword1">
+                            <input type="password" class="form-control w-75" id="loginPassword">
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Log In</button>
                     </form>
@@ -104,7 +104,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="sign-in">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control w-75" id="name" aria-describedby="emailHelp"
+                                required>
+                        </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
                             <input type="email" class="form-control w-75" id="email" aria-describedby="emailHelp"
@@ -113,14 +118,14 @@
                         </div>
                         <div class="mb-3">
                             <label for="number" class="form-label">Mobile Number</label>
-                            <input type="number" class="form-control w-75" id="password" aria-describedby="emailHelp"
+                            <input type="number" class="form-control w-75" id="number" aria-describedby="emailHelp"
                                 required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control w-75" id="exampleInputPassword1" required>
+                            <input type="password" class="form-control w-75" id="password" required>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                        <button type="submit" class="btn btn-primary w-100" id="signin-modal">Sign In</button>
                     </form>
                 </div>
             </div>
@@ -131,9 +136,11 @@
 
     <div class="dropdown">
         <ul class="nav justify-content-evenly">
+
             <li class="nav-item ">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                    aria-expanded="false" aria-current="page" href="#">MOBILES & TABLETS</a>
+                <!-- <p class=""></p> -->
+                <a class="nav-link active dropdown-toggle"  data-bs-toggle="dropdown"
+                    aria-expanded="false" aria-current="page" href="./HTML/product.html">MOBILES & TABLETS</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -260,30 +267,16 @@
                     <div class="container slider-product">
                         <div class="row text-center">
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
-                                    alt="error">
-                                <h4>boAt Flash Edition Smart Watch </h4>
-                                <h6>Price : <span>₹1299</span></h6>
-                                <h6>M.R.P : 2999</h6>
-                                <h6>You Save : 67%(₹1991)</h6>
+                                
                             </div>
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/boAt-Airdopes-138-Airdopes-491973383-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0NTY1fGltYWdlL2pwZWd8aW1hZ2VzL2gyMS9oNDAvOTkwNDQ4NjY3ODU1OC5qcGd8OGMyZjU0OGZmN2RmMDg5ZGQwNzU1ZjAyMmE1YWMxNWQ5NDU4MzdkZmRmNTQ0ZDI3N2I4Nzg5YzJmMjgwMDA3Mw"
-                                    alt="error">
-                                <h4>boAt Airdopes 138 Twin Wireless</h4>
-                                <h6>Price : <span>₹999</span></h6>
+                               
                             </div>
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/Boat-Rockerz-235-V2-Earphones-492579328-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxMTQwNXxpbWFnZS9qcGVnfGltYWdlcy9oNmUvaDdjLzk3NjUzNzM0MTEzNTguanBnfDk1MDg1YmQ4MzFlYTIxZTE4NGExMDZkYjdjMmQwODllNzkyNTQxNGY1YTIwNDY3NjM3NzI3N2EwNjdhZDhiZjU"
-                                    alt="error">
-                                <h4>boAt Rockerz 235V2  bluetooth Wirelesse</h4>
-                                <h6>Price : <span>5000</span></h6>
+                               
                             </div>
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
-                                    alt="error">
-                                <h4>Product Name</h4>
-                                <h6>Price : <span>5000</span></h6>
+                                
                             </div>
                         </div>
                     </div>
@@ -292,28 +285,16 @@
                     <div class="container slider-product">
                         <div class="row text-center">
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
-                                    alt="error">
-                                <h4>Product Name</h4>
-                                <h6>Price : <span>5000</span></h6>
+                                
                             </div>
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
-                                    alt="error">
-                                <h4>Product Name</h4>
-                                <h6>Price : <span>5000</span></h6>
+                               
                             </div>
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
-                                    alt="error">
-                                <h4>Product Name</h4>
-                                <h6>Price : <span>5000</span></h6>
+                                
                             </div>
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
-                                    alt="error">
-                                <h4>Product Name</h4>
-                                <h6>Price : <span>5000</span></h6>
+
                             </div>
                         </div>
                     </div>
@@ -322,28 +303,16 @@
                     <div class="container slider-product">
                         <div class="row text-center">
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
-                                    alt="error">
-                                <h4>Product Name</h4>
-                                <h6>Price : <span>5000</span></h6>
+                                
                             </div>
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
-                                    alt="error">
-                                <h4>Product Name</h4>
-                                <h6>Price : <span>5000</span></h6>
+                                
                             </div>
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
-                                    alt="error">
-                                <h4>Product Name</h4>
-                                <h6>Price : <span>5000</span></h6>
+                                
                             </div>
                             <div class="col">
-                                <img src="https://www.reliancedigital.in/medias/boAt-Watch-Flash-RTL-Smart-Watches-492574194-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4MjAzNnxpbWFnZS9qcGVnfGltYWdlcy9oMmUvaGZmLzk3NTU3NzkyMDMxMDIuanBnfDQ3OGM5MjJhYzNkMjcwZTY1MWNmYzAxMTc5ODYwOThkY2UyZjc1NzVjZGRiYmMyMjIwYWI0YTcyOTA5OTBjZjg"
-                                    alt="error">
-                                <h4>Product Name</h4>
-                                <h6>Price : <span>5000</span></h6>
+                                
                             </div>
                         </div>
                     </div>
