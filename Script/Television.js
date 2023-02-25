@@ -1,9 +1,4 @@
-let apiProduct = document.getElementById("apiProduct");
-let dataArray = [];
-let paginationData = [];
-let categoryData = [];
-let Page = 1;
-let ApiUrl=`https://mockapi-nr5i.onrender.com/Smartphones`
+let ApiUrl=`https://teleapi.onrender.com/Television`
 
 fetch(`${ApiUrl}`)
   .then((request) => {
@@ -116,17 +111,17 @@ Headpone.addEventListener("change", function () {
   }
 });
 
-let Smartphones = document.getElementById("Smartphone");
+let Television = document.getElementById("Television");
 
-Smartphones.addEventListener("change", function () {
+Television.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.category == Smartphones.value) {
+      if (el.category == Television.value) {
         return true;
       }
     });
     display(filterData);
-    product.innerText = Smartphones.value;
+    product.innerText = Television.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
@@ -151,90 +146,90 @@ Computer.addEventListener("change", function () {
   }
 });
 
-let Apple = document.getElementById("Apple");
+let LG = document.getElementById("LG");
 
-Apple.addEventListener("change", function () {
+LG.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.name == Apple.value) {
+      if (el.name == LG.value) {
         return true;
       }
     });
     display(filterData);
 
-    product.innerText = Apple.value;
+    product.innerText = LG.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
   }
 });
 
-let Google = document.getElementById("Google");
+let Hisense = document.getElementById("Hisense");
 
-Google.addEventListener("change", function () {
+Hisense.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.name == Google.value) {
+      if (el.name == Hisense.value) {
         return true;
       }
     });
     display(filterData);
 
-    product.innerText = Google.value;
+    product.innerText = Hisense.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
   }
 });
 
-let Nothing= document.getElementById("Nothing");
+let TCL= document.getElementById("TCL");
 
-Nothing.addEventListener("change", function () {
+TCL.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.name == Nothing.value) {
+      if (el.name == TCL.value) {
         return true;
       }
     });
     display(filterData);
 
-    product.innerText = Nothing.value;
+    product.innerText = TCL.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
   }
 });
 
-let Realme = document.getElementById("Realme");
+let IFFALCON = document.getElementById("IFFALCON");
 
-Realme.addEventListener("change", function () {
+IFFALCON.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.name == Realme.value) {
+      if (el.name == IFFALCON.value) {
         return true;
       }
     });
     display(filterData);
 
-    product.innerText = Realme.value;
+    product.innerText = IFFALCON.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
   }
 });
 
-let Samsung=document.getElementById("Samsung")
+let Toshiba=document.getElementById("Toshiba")
 
-Samsung.addEventListener("change", function () {
+Toshiba.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.name == Samsung.value) {
+      if (el.name == Toshiba.value) {
         return true;
       }
     });
     display(filterData);
 
-    product.innerText = Samsung.value;
+    product.innerText = Toshiba.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
@@ -308,16 +303,19 @@ function checkProduct(element) {
   return true;
 }
 
+
+//////////////range//////////////////////////////////
+
 let range=document.getElementById("volume")
 let rangeMin=document.querySelector(".rangeMin")
 
 range.addEventListener("change",function(){
   let filterData = dataArray.filter((el) => {
-    if (el.price>=15000 && el.price<=range.value) {
+    if (el.price>=15000  && el.price<=range.value) {
       return true;
     }
   });
- 
+
   display(filterData);
 
    rangeMin.innerText=`₹${range.value}`
