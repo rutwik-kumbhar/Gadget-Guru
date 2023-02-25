@@ -20,13 +20,13 @@ function Display(cart) {
     let img = document.createElement("img");
     img.setAttribute("src", element.image);
 
-    let name = document.createElement("h4");
+    let name = document.createElement("h5");
     name.innerText = element.name;
 
     let disc = document.createElement("p");
     disc.textContent = element.description;
 
-    let price = document.createElement("h4");
+    let price = document.createElement("h5");
     price.innerText = `₹${element.price}`;
 
     let quantity = document.createElement("span");
@@ -81,12 +81,14 @@ function Display(cart) {
   total.innerText = sum;
 
   if (total.innerText == 0) {
-    alert("Your Cart is Empty");
+    // alert("Your Cart is Empty");
     msg.innerText = "Please Place Your Order";
   }
-  if (msg.innerText == "Please Place Your Order") {
-    parent.style.display = "none";
-  } else {
-    parent.style.display = "block";
-  }
+  // if (msg.innerText == "Please Place Your Order") {
+  //   parent.style.display = "none";
+  // } else {
+  //   parent.style.display = "block";
+  // }
 }
+// book btn
+let bookBtn = documt.getElementById("book");
