@@ -37,7 +37,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-danger">
         <div class="container-fluid">
-            <a class="navbar-brand" style="margin-right: 180px;" href="#">Masai Digital</a>
+            <a class="navbar-brand" style="margin-right: 160px;" href="#">Masai Digital</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -51,17 +51,26 @@
                     </form>
                 </div>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item" id="cart" style="display: block;">
-                        <a class="nav-link active me-4" aria-current="page" href="#">Cart <span
-                                class="badge bg-secondary">4</span></a>
+                    <li class="nav-item" id="cart">
+                        <button class="btn btn-primary mx-1 user-info"> <i class="fa-solid fa-cart-shopping"></i> Cart <span class="badge bg-secondary">5</span></button>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-primary mx-1 user-info  dropdown-toggle" id="dropdownMenuUser"  aria-expanded="false" aria-current="page" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i> Rutwik
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuUser">
+                            <li>Name</li>
+                            <li>Gmail</li>
+                            <li>Mobile Number</li>
+                            <li></li>
+                        </ul>
+                        
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary mx-1" data-bs-toggle="modal"
+                        <button class="btn btn-primary mx-1 nav-btns" data-bs-toggle="modal"
                             data-bs-target="#loginModal">Login</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary mx-1" data-bs-toggle="modal"
-                            data-bs-target="#signinModal">Signin</button>
+                        <button class="btn btn-primary mx-1 nav-btns" data-bs-toggle="modal" data-bs-target="#signinModal">Signin</button>
                     </li>
                 </ul>
             </div>
@@ -88,12 +97,14 @@
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" class="form-control w-75" id="loginPassword">
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Log In</button>
+                        <button type="submit" class="btn btn-primary w-100" id="login-modal">Log In</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+     <!-- User Info  Modal started -->
 
     <!-- Sign In  Modal started -->
     <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
@@ -125,12 +136,14 @@
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" class="form-control w-75" id="password" required>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100" id="signin-modal">Sign In</button>
+                        <button type="submit" class="btn btn-primary w-100" data-bs-dismiss="modal" id="signin-modal">Sign In</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+
 
     <!------------------------------ Sub Navbar Strated Here ------------------------------->
 
@@ -140,7 +153,7 @@
             <li class="nav-item ">
                 <!-- <p class=""></p> -->
                 <a class="nav-link active dropdown-toggle"  data-bs-toggle="dropdown"
-                    aria-expanded="false" aria-current="page" href="./HTML/product.html">MOBILES & TABLETS</a>
+                    aria-expanded="false" aria-current="page" href="#">MOBILES & TABLETS</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -194,9 +207,6 @@
             </li>
         </ul>
     </div>
-
-
-
 
 
     <!---------------------------- carousel slide 1 Strated Here --------------------------->
