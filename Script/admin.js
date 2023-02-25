@@ -110,6 +110,8 @@ async function fetchData(){
    }
     document.querySelector("#footer").style="block";
     document.querySelector("#toptodown").style.display="block";
+    
+    
 }
 
 
@@ -137,7 +139,7 @@ async function deleteData(id) {
       let tableRow = document.querySelector(`#data-table-body tr[data-id="${id}"]`);
       tableRow.remove();
     // showEditModal(id)
-      
+          
     } catch (error) {
       console.error(error);
     }
@@ -171,3 +173,6 @@ async function deleteData(id) {
 
    });
 
+
+
+ 
