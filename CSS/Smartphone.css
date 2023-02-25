@@ -135,6 +135,7 @@
 
 #main {
   display: flex;
+ margin-top: 20px;
 }
 
 #productContainer {
@@ -173,6 +174,13 @@
   row-gap: 10px;
   margin-top: 10px;
   margin-left: 8px;
+}
+
+ #apiProduct>h2{
+ 
+ 
+
+  font-family: "Poppins", sans-serif;
 }
 
 .Card img {
@@ -249,7 +257,7 @@ p {
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 .Card:hover {
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+ 
   cursor: pointer;
 }
 .blank {
@@ -288,12 +296,14 @@ font-size: 30px;
     touch-action: none;
     width: 80%;
     cursor: pointer;
+   
 
 }
 
 #filterContainer span{
   font-family: "Poppins", sans-serif;
 }
+
 
 @media screen and (min-width: 320px) and (max-width: 499px) {
   #main {
