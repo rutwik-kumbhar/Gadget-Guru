@@ -13,6 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
+
+    
   
      <!-------------------- Bootstrap CSS ------------------->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -46,16 +48,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div id="search-div">
-                <form class="d-flex" style="margin-right:300px;">
+                <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-primary" style="color: white;" type="submit">Search</button>
                 </form>
             </div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navabar-btns">
                 <li class="nav-item" id="cart">
-                    <button class="btn btn-primary mx-1 user-info"> <i class="fa-solid fa-cart-shopping"></i> Cart
-                        <span class="badge bg-success" id="cart-count">5</span></button>
-                </li>
+                    <a href="./cart.html" style="text-decoration: none;"><button class="btn btn-primary mx-1 user-info"> <i class="fa-solid fa-cart-shopping"></i> Cart
+                     <span class="badge bg-success" id="cart-count">5</span></button></a>
+                 </li>
                 <li class="nav-item">
                     <button class="btn btn-primary mx-1 user-info  dropdown-toggle" id="dropdownMenuUser"><i
                             class="fa-solid fa-user"></i> <span id="user-name"></span>
@@ -162,7 +164,7 @@
             <a class="nav-link active "  href="./Television.html">TELEVISIONS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#">KITCHEN APPLIANCES</a>
+            <a class="nav-link active" href="./Audio.html">AUDIO</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" href="#">HOME APPLIANCES</a>
@@ -176,6 +178,53 @@
     </ul>
 </div>
    
+ <!---------------------------- carousel slide 1 Strated Here --------------------------->
+ <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="1000">
+            <img src="https://www.reliancedigital.in/medias/Boat-Carousel-Banner-21-02-2023.jpg?context=bWFzdGVyfGltYWdlc3w4MjA3NnxpbWFnZS9qcGVnfGltYWdlcy9oOWEvaGU5Lzk5NjQ0NzI0Njc0ODYuanBnfGRmZTU1OTA2NmY5MDI3YjliMGY4NzRiZDg4ZGM1MWJiN2JjN2YxN2EzODExYmEwMDM0NThkNTJmZDQ4MmU5YTQ"
+                class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-interval="1000">
+            <img src="https://www.reliancedigital.in/medias/Clearance-Sale-on-Everyday-Appliances-Carousel-Banner-Desktop.jpg?context=bWFzdGVyfGltYWdlc3w5MjQ3MHxpbWFnZS9qcGVnfGltYWdlcy9oMDkvaDljLzk5NjQzMzk4ODgxNTguanBnfDNjODg3NzQ1NjYyYjk5ZWQyNWI4Mjk5YWI5YzMxMWI3ZWEzOGUwMTZhZThjY2YzODRmOGJkODgzOTUxNjc0Mzc"
+                class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-interval="1000">
+            <img src="https://www.reliancedigital.in/medias/Samsung-Galaxy-S23-Series-CLP-Banner-Desktop.jpg?context=bWFzdGVyfGltYWdlc3w5NjUyNnxpbWFnZS9qcGVnfGltYWdlcy9oZjcvaDQ5Lzk5NjA4ODU3ODA1MTAuanBnfGRkM2Y5OTExODVjYzYwNmY2ZWFhMDRjZDUzODhjMTAwNWRjNjQ5Yjg0NmI2ZTQzZGQ0MDViNmNhMTg2ZDJkZDc"
+                class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-interval="1000">
+            <img src="https://www.reliancedigital.in/medias/OnePlus-Buds-Pro-2-CLP-Banner-14-02-2023.jpg?context=bWFzdGVyfGltYWdlc3w1NTEwN3xpbWFnZS9qcGVnfGltYWdlcy9oMGYvaDE3Lzk5NjA4ODU2NDk0MzguanBnfGI5ZTY2YWFhMmVmOWQ2N2YwZTcwM2JkODBmYzRlZWJjMWIxYjkxN2FkMWFlOTkyZTk5MGQ3OGE2OWI2NDI4Mjg"
+                class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-interval="1000">
+            <img src="https://www.reliancedigital.in/medias/Televisions-Carousel-Banner-03-02-2023.jpg?context=bWFzdGVyfGltYWdlc3w5NTA1NXxpbWFnZS9qcGVnfGltYWdlcy9oOTQvaGRmLzk5NTc2NTM2MTA1MjYuanBnfDZhZmEzYzdjNDcxNGQ0NjkxYjgxNzIyN2U1YWQxNjZiNTc1Y2Y5ODI5YzBmNjJmOWIxNDFjYmI0Y2M4Zjg5Y2I"
+                class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon slider-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon slider-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
     <!-------------------------------Main Container--------------------------------------->
     <div id="main">
@@ -307,9 +356,9 @@
             </div>
         </div>
     </div>
- 
+    <script src="../Script/Smartphone.js"></script>
+    <!-- <script src="../Script/index.js"></script> -->
    
   </body>
 </html>
-<script src="../Script/Smartphone.js"></script>
-<!-- <script src="../Script/index.js"></script> -->
+
