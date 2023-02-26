@@ -1,6 +1,8 @@
 let usersData = JSON.parse(localStorage.getItem('users')) || [];
 let logedUser = JSON.parse(localStorage.getItem('loged-user')) || {}
+let cartarr = JSON.parse(localStorage.getItem(`${logedUser.name}-cart`)) || [];
 
+let navbarBtns = document.querySelector("#navabar-btns")
 
 let userInfo = document.querySelectorAll(".user-info");
 let navBtns = document.querySelectorAll(".nav-btns");
@@ -10,9 +12,12 @@ let email = document.querySelector("#email")
 let number = document.querySelector("#no")
 let logout = document.querySelector("#logout")
 let userName = document.querySelector("#user-name")
+let cartCount = document.querySelector("#cart-count");
+cartCount.textContent = cartarr.length
 
 
 
+// logout 
 logout.addEventListener("click",()=>{
     localStorage.removeItem('loged-user');
     location.reload()
@@ -27,11 +32,12 @@ if(logedUser.name){
         el.style.display = "none"
     })
    name.textContent = logedUser.name
-   userName.textContent = logedUser.name
+   userName.textContent =  `Hi, ${logedUser.name.substr(0,6)}`
    email.textContent = logedUser.email
    number.textContent = logedUser.phone
+   navbarBtns.style.marginLeft = "32%"
 }else{
-    console.log("No")
+    navbarBtns.style.marginLeft = "43%"
 }
 
 
