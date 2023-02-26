@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .closest {
   color: grey;
   display: flex;
@@ -6,8 +12,10 @@
 
   margin-top: 10px;
   margin-bottom: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 .closest > a {
   text-decoration: none;
@@ -32,7 +40,8 @@
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
   width: 90%;
-  margin-left: 80px;
+  /* margin-left: 80px; */
+  margin-left: 5%;
 
   margin-top: 20px;
   margin-bottom: 40px;
@@ -118,7 +127,7 @@
   margin-left: 5%;
   padding: 20px;
   position: sticky;
-  top: 90px;
+  top: 50px;
   z-index: -50;
   margin-right: 20px;
 }
@@ -192,6 +201,45 @@
 }
 .footer-image > div i:hover {
   color: blue;
+}
+
+/* nav bar css */
+.form-control {
+  width: 300px;
+}
+
+.user-info {
+  display: none;
+}
+
+.nav-btns {
+  display: block;
+}
+
+#user-div {
+  width: 20%;
+  position: absolute;
+  top: 10%;
+  right: 1%;
+  z-index: 1;
+  padding: 8px 0px 8px 5px;
+  background-color: white;
+  line-height: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: none;
+}
+
+#btn-close {
+  position: absolute;
+
+  right: 5%;
+}
+
+#logout {
+  width: 200px;
+  /* display: block; */
+  margin: auto;
 }
 
 @media only screen and (min-width: 500px) and (max-width: 768px) {

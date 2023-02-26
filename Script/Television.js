@@ -3,7 +3,7 @@ let dataArray = [];
 let paginationData = [];
 let categoryData = [];
 let Page = 1;
-let ApiUrl=`https://teleapi.onrender.com/Television`
+let ApiUrl = `https://teleapi.onrender.com/Television`;
 
 fetch(`${ApiUrl}`)
   .then((request) => {
@@ -11,12 +11,9 @@ fetch(`${ApiUrl}`)
   })
   .then((data) => {
     dataArray = data;
-    paginationData=data
-    display(data)
-   
+    paginationData = data;
+    display(data);
   });
-
-
 
 function display(data) {
   apiProduct.innerHTML = "";
@@ -53,18 +50,14 @@ function getCard(id, name, price, description, image) {
   return card;
 }
 
-
-
 function getButton(text, id) {
   return `<button class="pagination-btn" data-page-Number=${id}>${text}</button>`;
 }
 
 let GO = document.querySelector(".GO");
 let min = document.querySelector(".min");
-  let max = document.querySelector(".max");
+let max = document.querySelector(".max");
 GO.addEventListener("click", function () {
-  
-
   if (min && max) {
     let filterData = paginationData.filter((el) => {
       if (el.price >= +min.value && el.price <= +max.value) {
@@ -103,11 +96,10 @@ Headpone.addEventListener("change", function () {
         return true;
       }
     });
-    if(filterData[0]==undefined){
-      apiProduct.innerHTML=`<h2 style="text-align:center;">OOps!! ${Headpone.value} is not available</h2>`
-      
-    }else{
-   display(filterData);
+    if (filterData[0] == undefined) {
+      apiProduct.innerHTML = `<h2 style="text-align:center;">OOps!! ${Headpone.value} is not available</h2>`;
+    } else {
+      display(filterData);
     }
     product.innerText = Headpone.value;
   } else {
@@ -187,7 +179,7 @@ Hisense.addEventListener("change", function () {
   }
 });
 
-let TCL= document.getElementById("TCL");
+let TCL = document.getElementById("TCL");
 
 TCL.addEventListener("change", function () {
   if (this.checked) {
@@ -223,7 +215,7 @@ IFFALCON.addEventListener("change", function () {
   }
 });
 
-let Toshiba=document.getElementById("Toshiba")
+let Toshiba = document.getElementById("Toshiba");
 
 Toshiba.addEventListener("change", function () {
   if (this.checked) {
@@ -272,7 +264,8 @@ desc.addEventListener("click", function () {
 });
 // ADD to cart functionality
 
-let cartarr = JSON.parse(localStorage.getItem("cart")) || [];
+let logedUser = JSON.parse(localStorage.getItem("loged-user")) || {};
+let cartarr = JSON.parse(localStorage.getItem(`${logedUser.name}-cart`)) || [];
 setTimeout(() => {
   let addToCart = document.querySelectorAll(".AddToCart");
 
@@ -289,12 +282,24 @@ function btnClicked(Btn) {
 
 function addToCart(Btn) {
   for (let i = 0; i < dataArray.length; i++) {
-    if (dataArray[i].id == Btn && checkProduct(dataArray[i])) {
+    if (
+      dataArray[i].id == Btn &&
+      checkProduct(dataArray[i]) &&
+      checkUserLoging()
+    ) {
       cartarr.push({ ...dataArray[i], quantity: 1 });
-      localStorage.setItem("cart", JSON.stringify(cartarr));
+      localStorage.setItem(`${logedUser.name}-cart`, JSON.stringify(cartarr));
       alert("Product Added To The Cart");
       break;
     }
+  }
+}
+
+function checkUserLoging() {
+  if (logedUser.name) {
+    return true;
+  } else {
+    alert("First Login on Website");
   }
 }
 
@@ -308,21 +313,62 @@ function checkProduct(element) {
   return true;
 }
 
-
 //////////////range//////////////////////////////////
 
-let range=document.getElementById("volume")
-let rangeMin=document.querySelector(".rangeMin")
+let range = document.getElementById("volume");
+let rangeMin = document.querySelector(".rangeMin");
 
-range.addEventListener("change",function(){
+range.addEventListener("change", function () {
   let filterData = dataArray.filter((el) => {
-    if (el.price>=15000  && el.price<=range.value) {
+    if (el.price >= 15000 && el.price <= range.value) {
       return true;
     }
   });
 
   display(filterData);
 
-   rangeMin.innerText=`₹${range.value}`
-  
-})
+  rangeMin.innerText = `₹${range.value}`;
+});
+
+// user login checked
+let userInfo = document.querySelectorAll(".user-info");
+let navBtns = document.querySelectorAll(".nav-btns");
+
+let name = document.querySelector("#name");
+let email = document.querySelector("#email");
+let number = document.querySelector("#no");
+
+if (logedUser.name) {
+  userInfo.forEach((el) => {
+    el.style.display = "block";
+  });
+  navBtns.forEach((el) => {
+    el.style.display = "none";
+  });
+  name.textContent = logedUser.name;
+  email.textContent = logedUser.email;
+  number.textContent = logedUser.phone;
+} else {
+  console.log("No");
+}
+
+// logout out
+
+let logout = document.querySelector("#logout");
+
+logout.addEventListener("click", () => {
+  localStorage.removeItem("loged-user");
+  location.reload();
+});
+
+let userInfoBtn = document.querySelector("#dropdownMenuUser");
+let userDiv = document.querySelector("#user-div");
+let btnClose = document.querySelector("#btn-close");
+
+userInfoBtn.addEventListener("click", () => {
+  userDiv.style.display = "block";
+});
+
+btnClose.addEventListener("click", () => {
+  userDiv.style.display = "none";
+});
