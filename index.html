@@ -38,7 +38,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-danger">
         <div class="container-fluid">
-            <a class="navbar-brand" style="margin-right:16%;" href="./index.html"><img src="./logo-removebg.png"
+            <a class="navbar-brand" style="margin-right:15%;" href="./index.html"><img src="./logo-removebg.png"
                     style="width:120px ;height: 40px;" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -47,19 +47,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div id="search-div">
-                    <form class="d-flex" style="margin-right:300px;">
+                    <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-primary" style="color: white;" type="submit">Search</button>
                     </form>
                 </div>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navabar-btns">
                     <li class="nav-item" id="cart">
                         <button class="btn btn-primary mx-1 user-info"> <i class="fa-solid fa-cart-shopping"></i> Cart
-                            <span class="badge bg-secondary">5</span></button>
+                            <span class="badge bg-success" id="cart-count">5</span></button>
                     </li>
                     <li class="nav-item">
                         <button class="btn btn-primary mx-1 user-info  dropdown-toggle" id="dropdownMenuUser"><i
-                                class="fa-solid fa-user"></i> <span id="user-name"></span> 
+                                class="fa-solid fa-user"></i> <span id="user-name"></span>
                         </button>
                     </li>
                     <li class="nav-item">
@@ -160,7 +160,7 @@
                 <a class="nav-link active" href="./HTML/Smartphone.html">MOBILES & TABLETS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active "  href="./HTML/Television.html">TELEVISIONS</a>
+                <a class="nav-link active " href="./HTML/Television.html">TELEVISIONS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="#">KITCHEN APPLIANCES</a>
@@ -169,7 +169,7 @@
                 <a class="nav-link active" href="#">HOME APPLIANCES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active"  href="#" >ACCESSORIES</a>
+                <a class="nav-link active" href="#">ACCESSORIES</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="#">PERSONAL CARE</a>
@@ -440,9 +440,9 @@
         </button>
     </div>
 
-<!-- product clouser 2 -->
-<div class="blank"></div>
-        <div class="container">
+    <!-- product clouser 2 -->
+    <div class="blank"></div>
+    <div class="container">
         <h4>Special Offers</h4>
         <div id="carouselProductSlider2" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -470,7 +470,7 @@
                                     alt="error">
                                 <h4>Eureka Forbes Maxima 7 litres RO + UV + MTDS ME Water Purifier</h4>
                                 <h6>Price : <span>₹9,499</span></h6>
-                                  <h6>M.R.P : 14,000</h6>
+                                <h6>M.R.P : 14,000</h6>
                                 <h6>You Save : 32%(₹4,501)</h6>
                             </div>
                             <div class="col">
@@ -478,7 +478,7 @@
                                     alt="error">
                                 <h4>Candes 25 litres Storage Water Geyser ABS Body</h4>
                                 <h6>Price : <span>₹4,499</span></h6>
-                                  <h6>M.R.P : 9,799</h6>
+                                <h6>M.R.P : 9,799</h6>
                                 <h6>You Save : 54%(₹5,300)</h6>
                             </div>
                             <div class="col">
@@ -486,7 +486,7 @@
                                     alt="error">
                                 <h4>Lifelong LLCF150 High Speed Decorative Premium Ceiling Fan</h4>
                                 <h6>Price : <span>₹1,199</span></h6>
-                                  <h6>M.R.P : 3,000</h6>
+                                <h6>M.R.P : 3,000</h6>
                                 <h6>You Save : 60%(₹1,801)</h6>
                             </div>
                         </div>
@@ -500,7 +500,7 @@
                                     alt="error">
                                 <h4>Sansui JSE37RIC-KAZE 37 Litres Portable Air Cooler with Dust </h4>
                                 <h6>Price : <span>₹5,490</span></h6>
-                                  <h6>M.R.P : 8,490</h6>
+                                <h6>M.R.P : 8,490</h6>
                                 <h6>You Save : 35%(₹3,000)</h6>
                             </div>
                             <div class="col">
@@ -508,7 +508,7 @@
                                     alt="error">
                                 <h4>Hindware Calisto 7 Litres RO+UV+UF Water Purifier</h4>
                                 <h6>Price : <span>₹5,499</span></h6>
-                                  <h6>M.R.P : 14,990</h6>
+                                <h6>M.R.P : 14,990</h6>
                                 <h6>You Save : 63%(₹9,491)</h6>
                             </div>
                             <div class="col">
@@ -516,7 +516,7 @@
                                     alt="error">
                                 <h4>Candes Acura 1200 mm High Speed BLDC Ceiling Fan</h4>
                                 <h6>Price : <span>₹2,699</span></h6>
-                                  <h6>M.R.P : 4,499</h6>
+                                <h6>M.R.P : 4,499</h6>
                                 <h6>You Save : 40%(₹1,800)</h6>
                             </div>
                             <div class="col">
@@ -524,7 +524,7 @@
                                     alt="error">
                                 <h4>Candes 3 litres Instant Water Geyser</h4>
                                 <h6>Price : <span>₹2,099</span></h6>
-                                  <h6>M.R.P : 4,149</h6>
+                                <h6>M.R.P : 4,149</h6>
                                 <h6>You Save : 49%(₹2,050)</h6>
                             </div>
                         </div>
@@ -538,7 +538,7 @@
                                     alt="error">
                                 <h4>Eufy Robotic Robovac 11s Vacuum Cleaner</h4>
                                 <h6>Price : <span>₹12,999</span></h6>
-                                  <h6>M.R.P : 19,999</h6>
+                                <h6>M.R.P : 19,999</h6>
                                 <h6>You Save : 35%(₹7,000)</h6>
                             </div>
                             <div class="col">
@@ -546,7 +546,7 @@
                                     alt="error">
                                 <h4>Orient 15 Litre New Glazio Storage Glassline Water Heater</h4>
                                 <h6>Price : <span>₹6,799</span></h6>
-                                  <h6>M.R.P : 13,790</h6>
+                                <h6>M.R.P : 13,790</h6>
                                 <h6>You Save : 51%(₹6,991)</h6>
                             </div>
                             <div class="col">
@@ -554,7 +554,7 @@
                                     alt="error">
                                 <h4>Sansui JSE37RIC-KAZE 37 Litres Portable Air Cooler</h4>
                                 <h6>Price : <span>₹5,490</span></h6>
-                                  <h6>M.R.P : 28,490</h6>
+                                <h6>M.R.P : 28,490</h6>
                                 <h6>You Save : 35%(₹3,000)</h6>
                             </div>
                             <div class="col">
@@ -562,7 +562,7 @@
                                     alt="error">
                                 <h4>Candes 25 litres Storage Water Geyser ABS Body (Gracia)</h4>
                                 <h6>Price : <span>₹4,499</span></h6>
-                                  <h6>M.R.P : 9,799</h6>
+                                <h6>M.R.P : 9,799</h6>
                                 <h6>You Save : 54%(₹5,300)</h6>
                             </div>
                         </div>

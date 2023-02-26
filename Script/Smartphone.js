@@ -275,6 +275,8 @@ desc.addEventListener("click", function () {
 
 let logedUser = JSON.parse(localStorage.getItem('loged-user')) || {}
 let cartarr = JSON.parse(localStorage.getItem(`${logedUser.name}-cart`)) || [];
+let cartCount = document.querySelector("#cart-count");
+cartCount.textContent = cartarr.length
 setTimeout(() => {
   let addToCart = document.querySelectorAll(".AddToCart");
 
@@ -294,6 +296,7 @@ function addToCart(Btn) {
     if (dataArray[i].id == Btn && checkProduct(dataArray[i]) && checkUserLoging()) {
       cartarr.push({ ...dataArray[i], quantity: 1 });
       localStorage.setItem(`${logedUser.name}-cart`, JSON.stringify(cartarr));
+      cartCount.textContent = cartarr.length
       alert("Product Added To The Cart");
       break;
     }
@@ -339,10 +342,12 @@ range.addEventListener("change",function(){
 let userInfo = document.querySelectorAll(".user-info");
 let navBtns = document.querySelectorAll(".nav-btns");
 
+let navbarBtns = document.querySelector("#navabar-btns")
 
 let name = document.querySelector("#name")
 let email = document.querySelector("#email")
 let number = document.querySelector("#no")
+let userName = document.querySelector("#user-name")
 
 if(logedUser.name){
   userInfo.forEach((el)=>{
@@ -352,10 +357,12 @@ if(logedUser.name){
       el.style.display = "none"
   })
  name.textContent = logedUser.name
+ userName.textContent = logedUser.name
  email.textContent = logedUser.email
  number.textContent = logedUser.phone
+//  navbarBtns.style.marginLeft = "32%"
 }else{
-  console.log("No")
+  // navbarBtns.style.marginLeft = "43%"
 }
 
 
@@ -370,16 +377,20 @@ logout.addEventListener("click",()=>{
 
 
 
+
+
+
+
+
+// user info box
 let userInfoBtn = document.querySelector("#dropdownMenuUser")
 let userDiv = document.querySelector("#user-div")
 let btnClose = document.querySelector("#btn-close")
-
 
 userInfoBtn.addEventListener("click",()=>{
     userDiv.style.display = "block"
     
 })
-
 btnClose.addEventListener("click",()=>{
     userDiv.style.display = "none"
 })
