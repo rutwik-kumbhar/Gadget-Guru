@@ -11,11 +11,12 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./CSS/index.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Hello, world!</title>
+    <title>Home Page</title>
 </head>
 
 <body>
@@ -37,7 +38,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-danger">
         <div class="container-fluid">
-            <a class="navbar-brand" style="margin-right: 160px;" href="#">Masai Digital</a>
+            <a class="navbar-brand" style="margin-right:16%;" href="./index.html"><img src="./logo-removebg.png"
+                    style="width:120px ;height: 40px;" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -47,30 +49,26 @@
                 <div id="search-div">
                     <form class="d-flex" style="margin-right:300px;">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-outline-primary" style="color: white;" type="submit">Search</button>
                     </form>
                 </div>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item" id="cart">
-                        <button class="btn btn-primary mx-1 user-info"> <i class="fa-solid fa-cart-shopping"></i> Cart <span class="badge bg-secondary">5</span></button>
+                        <button class="btn btn-primary mx-1 user-info"> <i class="fa-solid fa-cart-shopping"></i> Cart
+                            <span class="badge bg-secondary">5</span></button>
                     </li>
-                    <li class="nav-item dropdown">
-                        <button class="btn btn-primary mx-1 user-info  dropdown-toggle" id="dropdownMenuUser"  aria-expanded="false" aria-current="page" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i> Rutwik
+                    <li class="nav-item">
+                        <button class="btn btn-primary mx-1 user-info  dropdown-toggle" id="dropdownMenuUser"><i
+                                class="fa-solid fa-user"></i> <span id="user-name"></span> 
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuUser">
-                            <li>Name</li>
-                            <li>Gmail</li>
-                            <li>Mobile Number</li>
-                            <li></li>
-                        </ul>
-                        
                     </li>
                     <li class="nav-item">
                         <button class="btn btn-primary mx-1 nav-btns" data-bs-toggle="modal"
                             data-bs-target="#loginModal">Login</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary mx-1 nav-btns" data-bs-toggle="modal" data-bs-target="#signinModal">Signin</button>
+                        <button class="btn btn-primary mx-1 nav-btns" data-bs-toggle="modal"
+                            data-bs-target="#signinModal">Signin</button>
                     </li>
                 </ul>
             </div>
@@ -89,8 +87,7 @@
                     <form id="log-in">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control w-75" id="loginEmail"
-                                aria-describedby="emailHelp">
+                            <input type="email" class="form-control w-75" id="loginEmail" aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                         </div>
                         <div class="mb-3">
@@ -104,7 +101,14 @@
         </div>
     </div>
 
-     <!-- User Info  Modal started -->
+    <!-- User Info  Modal started -->
+    <div id="user-div">
+        <p><button class=" btn-close btn-sm" id="btn-close"></button></p>
+        <p>Name : <span id="name"></span></p>
+        <p>Email : <span id="email"></span></p>
+        <p>No. : <span id="no"></span></p>
+        <p id="logout"><button type="button" class="btn btn-outline-danger  btn-sm w-75 m-auto">Log Out</button></p>
+    </div>
 
     <!-- Sign In  Modal started -->
     <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
@@ -136,7 +140,8 @@
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" class="form-control w-75" id="password" required>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100" data-bs-dismiss="modal" id="signin-modal">Sign In</button>
+                        <button type="submit" class="btn btn-primary w-100" data-bs-dismiss="modal"
+                            id="signin-modal">Sign In</button>
                     </form>
                 </div>
             </div>
@@ -152,58 +157,22 @@
 
             <li class="nav-item ">
                 <!-- <p class=""></p> -->
-                <a class="nav-link active dropdown-toggle"  data-bs-toggle="dropdown"
-                    aria-expanded="false" aria-current="page" href="#">MOBILES & TABLETS</a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link active" href="./HTML/Smartphone.html">MOBILES & TABLETS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                    aria-expanded="false" href="#" tabindex="-1">ELECTROICS</a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link active "  href="./HTML/Television.html">TELEVISIONS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                    aria-expanded="false" href="#">KITCHEN APPLIANCES</a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link active" href="#">KITCHEN APPLIANCES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                    aria-expanded="false" href="#">HOME APPLIANCES</a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link active" href="#">HOME APPLIANCES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                    aria-expanded="false" href="#" tabindex="-1" aria-disabled="true">ACCESSORIES</a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link active"  href="#" >ACCESSORIES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                    aria-expanded="false" href="#" tabindex="-1" aria-disabled="true">PERSONAL CARE</a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link active" href="#">PERSONAL CARE</a>
             </li>
         </ul>
     </div>
@@ -261,7 +230,7 @@
 
     <div class="blank"></div>
 
-     <div class="container">
+    <div class="container">
         <h4>Special Offers</h4>
         <div id="carouselProductSlider" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -289,15 +258,15 @@
                                     alt="error">
                                 <h4>boAt Airdopes 138 Twin Wireless</h4>
                                 <h6>Price : <span>₹999</span></h6>
-                                  <h6>M.R.P : 2,999</h6>
+                                <h6>M.R.P : 2,999</h6>
                                 <h6>You Save : 67%(₹1,991)</h6>
                             </div>
                             <div class="col">
                                 <img src="https://www.reliancedigital.in/medias/Boat-Rockerz-235-V2-Earphones-492579328-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxMTQwNXxpbWFnZS9qcGVnfGltYWdlcy9oNmUvaDdjLzk3NjUzNzM0MTEzNTguanBnfDk1MDg1YmQ4MzFlYTIxZTE4NGExMDZkYjdjMmQwODllNzkyNTQxNGY1YTIwNDY3NjM3NzI3N2EwNjdhZDhiZjU"
                                     alt="error">
-                                <h4>boAt Rockerz 235V2  bluetooth Wirelesse</h4>
+                                <h4>boAt Rockerz 235V2 bluetooth Wirelesse</h4>
                                 <h6>Price : <span>₹790</span></h6>
-                                  <h6>M.R.P : 2,990</h6>
+                                <h6>M.R.P : 2,990</h6>
                                 <h6>You Save : 73%(₹2,991)</h6>
                             </div>
                             <div class="col">
@@ -305,7 +274,7 @@
                                     alt="error">
                                 <h4>boAt Wave Lynk Voice Smartwatch</h4>
                                 <h6>Price : <span>₹1,199</span></h6>
-                                  <h6>M.R.P : 6,499</h6>
+                                <h6>M.R.P : 6,499</h6>
                                 <h6>You Save : 69%(₹4,500)</h6>
                             </div>
                         </div>
@@ -319,7 +288,7 @@
                                     alt="error">
                                 <h4>boAt Aavante Bar 908 2.0 Channel Sound Bar </h4>
                                 <h6>Price : <span>₹2,499</span></h6>
-                                  <h6>M.R.P : 5,990</h6>
+                                <h6>M.R.P : 5,990</h6>
                                 <h6>You Save : 58%(₹3,491)</h6>
                             </div>
                             <div class="col">
@@ -327,7 +296,7 @@
                                     alt="error">
                                 <h4>boAt Rockerz 255 Pro in Ear Bluetooth Neckband</h4>
                                 <h6>Price : <span>₹1,299</span></h6>
-                                  <h6>M.R.P : 3,499</h6>
+                                <h6>M.R.P : 3,499</h6>
                                 <h6>You Save : 63%(₹2,200)</h6>
                             </div>
                             <div class="col">
@@ -335,7 +304,7 @@
                                     alt="error">
                                 <h4>boAt Flash Edition Smart Watch with Activity Tracker</h4>
                                 <h6>Price : <span>₹1,299</span></h6>
-                                  <h6>M.R.P : 6,990</h6>
+                                <h6>M.R.P : 6,990</h6>
                                 <h6>You Save : 81%(₹5,691)</h6>
                             </div>
                             <div class="col">
@@ -343,7 +312,7 @@
                                     alt="error">
                                 <h4>boAt Airdopes 148 Bluetooth Truly Wireless</h4>
                                 <h6>Price : <span>₹1,399</span></h6>
-                                  <h6>M.R.P : 4,490</h6>
+                                <h6>M.R.P : 4,490</h6>
                                 <h6>You Save : 70%(₹3,141)</h6>
                             </div>
                         </div>
@@ -357,7 +326,7 @@
                                     alt="error">
                                 <h4>boAt Wave Lynk Voice Smartwatch</h4>
                                 <h6>Price : <span>₹1,999</span></h6>
-                                  <h6>M.R.P : 6,499</h6>
+                                <h6>M.R.P : 6,499</h6>
                                 <h6>You Save : 69%(₹4,500)</h6>
                             </div>
                             <div class="col">
@@ -365,7 +334,7 @@
                                     alt="error">
                                 <h4>boAt Aavante Bar 908 2.0 Channel Sound Bar</h4>
                                 <h6>Price : <span>₹2,499</span></h6>
-                                  <h6>M.R.P : 5,990</h6>
+                                <h6>M.R.P : 5,990</h6>
                                 <h6>You Save : 58%(₹3,491)</h6>
                             </div>
                             <div class="col">
@@ -373,7 +342,7 @@
                                     alt="error">
                                 <h4>boAt Airdopes 138 Twin Wireless Earbuds</h4>
                                 <h6>Price : <span>₹999</span></h6>
-                                  <h6>M.R.P : 2,999</h6>
+                                <h6>M.R.P : 2,999</h6>
                                 <h6>You Save : 67%(₹1991)</h6>
                             </div>
                             <div class="col">
@@ -381,7 +350,7 @@
                                     alt="error">
                                 <h4>boAt Rockerz 255 Pro in Ear Bluetooth</h4>
                                 <h6>Price : <span>₹1,299</span></h6>
-                                  <h6>M.R.P : 3,499</h6>
+                                <h6>M.R.P : 3,499</h6>
                                 <h6>You Save : 63%(₹2,200)</h6>
                             </div>
                         </div>

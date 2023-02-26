@@ -25,13 +25,23 @@
   background-image: none;
  
 }
+
 .carousel-control-next-icon:after {
- 
+  content: ">";
+  font-size: 55px;
+  position: relative;
+  left: 80%;
+  color: blue;
 }
 
 .carousel-control-prev-icon:after {
- 
+  content: "<";
+  font-size: 55px;
+  position: relative;
+  right: 80%;
+  color: blue;
 }
+
 
 .slider-product img,.container-deals  img {
   width: 200px;
@@ -64,4 +74,29 @@
 
 .nav-btns{
   display: block;
+}
+
+#user-div{
+ width: 20%;
+ position: absolute;
+ top: 10%;
+ right: 1%;
+ z-index: 1;
+ padding: 8px 0px 8px 5px;
+ background-color: white;
+ line-height: 10px;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+ display: none;
+}
+
+#btn-close{
+  position: absolute;
+  
+  right: 5%;
+}
+
+#logout{
+  width: 200px;
+  /* display: block; */
+  margin: auto;
 }
