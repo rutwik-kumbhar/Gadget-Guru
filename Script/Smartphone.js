@@ -343,6 +343,7 @@ let userInfo = document.querySelectorAll(".user-info");
 let navBtns = document.querySelectorAll(".nav-btns");
 
 let navbarBtns = document.querySelector("#navabar-btns")
+console.log(navbarBtns)
 
 let name = document.querySelector("#name")
 let email = document.querySelector("#email")
@@ -357,12 +358,12 @@ if(logedUser.name){
       el.style.display = "none"
   })
  name.textContent = logedUser.name
- userName.textContent = logedUser.name
+ userName.textContent = `Hi, ${logedUser.name.substr(0,6)}`
  email.textContent = logedUser.email
  number.textContent = logedUser.phone
-//  navbarBtns.style.marginLeft = "32%"
+ navbarBtns.style.marginLeft = "32%"
 }else{
-  // navbarBtns.style.marginLeft = "43%"
+  navbarBtns.style.marginLeft = "43%"
 }
 
 
@@ -374,13 +375,6 @@ logout.addEventListener("click",()=>{
     localStorage.removeItem('loged-user');
     location.reload()
 })
-
-
-
-
-
-
-
 
 // user info box
 let userInfoBtn = document.querySelector("#dropdownMenuUser")

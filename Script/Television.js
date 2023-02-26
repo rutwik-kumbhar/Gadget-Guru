@@ -264,8 +264,10 @@ desc.addEventListener("click", function () {
 });
 // ADD to cart functionality
 
-let logedUser = JSON.parse(localStorage.getItem("loged-user")) || {};
+let logedUser = JSON.parse(localStorage.getItem('loged-user')) || {}
 let cartarr = JSON.parse(localStorage.getItem(`${logedUser.name}-cart`)) || [];
+let cartCount = document.querySelector("#cart-count");
+cartCount.textContent = cartarr.length
 setTimeout(() => {
   let addToCart = document.querySelectorAll(".AddToCart");
 
@@ -282,13 +284,10 @@ function btnClicked(Btn) {
 
 function addToCart(Btn) {
   for (let i = 0; i < dataArray.length; i++) {
-    if (
-      dataArray[i].id == Btn &&
-      checkProduct(dataArray[i]) &&
-      checkUserLoging()
-    ) {
+    if (dataArray[i].id == Btn && checkProduct(dataArray[i]) && checkUserLoging()) {
       cartarr.push({ ...dataArray[i], quantity: 1 });
       localStorage.setItem(`${logedUser.name}-cart`, JSON.stringify(cartarr));
+      cartCount.textContent = cartarr.length
       alert("Product Added To The Cart");
       break;
     }
@@ -334,41 +333,50 @@ range.addEventListener("change", function () {
 let userInfo = document.querySelectorAll(".user-info");
 let navBtns = document.querySelectorAll(".nav-btns");
 
-let name = document.querySelector("#name");
-let email = document.querySelector("#email");
-let number = document.querySelector("#no");
+let navbarBtns = document.querySelector("#navabar-btns")
+console.log(navbarBtns)
 
-if (logedUser.name) {
-  userInfo.forEach((el) => {
-    el.style.display = "block";
-  });
-  navBtns.forEach((el) => {
-    el.style.display = "none";
-  });
-  name.textContent = logedUser.name;
-  email.textContent = logedUser.email;
-  number.textContent = logedUser.phone;
-} else {
-  console.log("No");
+let name = document.querySelector("#name")
+let email = document.querySelector("#email")
+let number = document.querySelector("#no")
+let userName = document.querySelector("#user-name")
+
+if(logedUser.name){
+  userInfo.forEach((el)=>{
+      el.style.display = "block"
+  })
+  navBtns.forEach((el)=>{
+      el.style.display = "none"
+  })
+ name.textContent = logedUser.name
+ userName.textContent = `Hi, ${logedUser.name.substr(0,6)}`
+ email.textContent = logedUser.email
+ number.textContent = logedUser.phone
+ navbarBtns.style.marginLeft = "32%"
+}else{
+  navbarBtns.style.marginLeft = "43%"
 }
+
 
 // logout out
 
-let logout = document.querySelector("#logout");
+let logout = document.querySelector("#logout")
 
-logout.addEventListener("click", () => {
-  localStorage.removeItem("loged-user");
-  location.reload();
-});
+logout.addEventListener("click",()=>{
+    localStorage.removeItem('loged-user');
+    location.reload()
+})
 
-let userInfoBtn = document.querySelector("#dropdownMenuUser");
-let userDiv = document.querySelector("#user-div");
-let btnClose = document.querySelector("#btn-close");
+// user info box
+let userInfoBtn = document.querySelector("#dropdownMenuUser")
+let userDiv = document.querySelector("#user-div")
+let btnClose = document.querySelector("#btn-close")
 
-userInfoBtn.addEventListener("click", () => {
-  userDiv.style.display = "block";
-});
+userInfoBtn.addEventListener("click",()=>{
+    userDiv.style.display = "block"
+    
+})
+btnClose.addEventListener("click",()=>{
+    userDiv.style.display = "none"
+})
 
-btnClose.addEventListener("click", () => {
-  userDiv.style.display = "none";
-});

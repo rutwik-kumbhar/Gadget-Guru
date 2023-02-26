@@ -1,7 +1,9 @@
 let logedUser = JSON.parse(localStorage.getItem("loged-user")) || {};
 
 let Cart = JSON.parse(localStorage.getItem(`${logedUser.name}-cart`)) || [];
-console.log(Cart);
+let cartCount = document.querySelector("#cart-count");
+cartCount.textContent = Cart.length
+
 let container = document.getElementById("container");
 let parent = document.querySelector(".parent");
 let left = document.querySelector(".left");
@@ -93,7 +95,7 @@ function Display(cart) {
 //   window.location.href = "./";
 // });
 //////////// nav-bar js part////////////
-let usersData = JSON.parse(localStorage.getItem("users")) || [];
+// let usersData = JSON.parse(localStorage.getItem("users")) || [];
 // let logedUser = JSON.parse(localStorage.getItem("loged-user")) || {};
 
 let userInfo = document.querySelectorAll(".user-info");
