@@ -1,8 +1,8 @@
 
 let data = [];
 // ///////////////////////////////////////////////////////////////////////////////
-let url1="https://mockapi-nr5i.onrender.com/Smartphones";
 
+let url1="https://audio-api-vw3a.onrender.com/Audio";
 
 fetchData()
 
@@ -171,7 +171,6 @@ async function deleteData(id) {
                body:JSON.stringify({price:price})
            })
            fetchData()
-          
         }
          catch (error) {
           console.log(error)
@@ -180,10 +179,10 @@ async function deleteData(id) {
    });
 
 
-document.querySelector("#television").addEventListener("click",function(){
-        window.location.assign("admin1.html");
+   document.querySelector("#smart").addEventListener("click",function(){
+    window.location.assign("admin.html");
 })
 
-document.querySelector("#Audio").addEventListener("click",function(){
-  window.location.assign("admin2.html");
+document.querySelector("#television").addEventListener("click",function(){
+window.location.assign("admin1.html");
 })
