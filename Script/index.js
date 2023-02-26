@@ -5,6 +5,20 @@ let logedUser = JSON.parse(localStorage.getItem('loged-user')) || {}
 let userInfo = document.querySelectorAll(".user-info");
 let navBtns = document.querySelectorAll(".nav-btns");
 
+let name = document.querySelector("#name")
+let email = document.querySelector("#email")
+let number = document.querySelector("#no")
+let logout = document.querySelector("#logout")
+let userName = document.querySelector("#user-name")
+
+
+
+logout.addEventListener("click",()=>{
+    localStorage.removeItem('loged-user');
+    location.reload()
+})
+
+
 if(logedUser.name){
     userInfo.forEach((el)=>{
         el.style.display = "block"
@@ -12,12 +26,16 @@ if(logedUser.name){
     navBtns.forEach((el)=>{
         el.style.display = "none"
     })
+   name.textContent = logedUser.name
+   userName.textContent = logedUser.name
+   email.textContent = logedUser.email
+   number.textContent = logedUser.phone
 }else{
     console.log("No")
 }
 
 
-
+ 
 getUserData()
 
 function getUserData(){
@@ -67,6 +85,7 @@ function loginUser(){
             navBtns.forEach((el)=>{
                 el.style.display = "none"
             })
+            location.reload()
         }else{
             alert("wrong credential")
         }
@@ -76,6 +95,21 @@ function loginUser(){
 }
 
 loginUser()
+
+
+let userInfoBtn = document.querySelector("#dropdownMenuUser")
+let userDiv = document.querySelector("#user-div")
+let btnClose = document.querySelector("#btn-close")
+
+
+userInfoBtn.addEventListener("click",()=>{
+    userDiv.style.display = "block"
+    
+})
+
+btnClose.addEventListener("click",()=>{
+    userDiv.style.display = "none"
+})
 
 
 

@@ -270,9 +270,11 @@ desc.addEventListener("click", function () {
   }
   display(paginationData);
 });
+
 // ADD to cart functionality
 
-let cartarr = JSON.parse(localStorage.getItem("cart")) || [];
+let logedUser = JSON.parse(localStorage.getItem('loged-user')) || {}
+let cartarr = JSON.parse(localStorage.getItem(`${logedUser.name}-cart`)) || [];
 setTimeout(() => {
   let addToCart = document.querySelectorAll(".AddToCart");
 
@@ -289,13 +291,21 @@ function btnClicked(Btn) {
 
 function addToCart(Btn) {
   for (let i = 0; i < dataArray.length; i++) {
-    if (dataArray[i].id == Btn && checkProduct(dataArray[i])) {
+    if (dataArray[i].id == Btn && checkProduct(dataArray[i]) && checkUserLoging()) {
       cartarr.push({ ...dataArray[i], quantity: 1 });
-      localStorage.setItem("cart", JSON.stringify(cartarr));
+      localStorage.setItem(`${logedUser.name}-cart`, JSON.stringify(cartarr));
       alert("Product Added To The Cart");
       break;
     }
   }
+}
+
+function checkUserLoging(){
+    if(logedUser.name){
+      return true
+    }else{
+      alert("First Login on Website")
+    }
 }
 
 function checkProduct(element) {
@@ -322,4 +332,54 @@ range.addEventListener("change",function(){
 
    rangeMin.innerText=`₹${range.value}`
   
+})
+
+
+// user login checked
+let userInfo = document.querySelectorAll(".user-info");
+let navBtns = document.querySelectorAll(".nav-btns");
+
+
+let name = document.querySelector("#name")
+let email = document.querySelector("#email")
+let number = document.querySelector("#no")
+
+if(logedUser.name){
+  userInfo.forEach((el)=>{
+      el.style.display = "block"
+  })
+  navBtns.forEach((el)=>{
+      el.style.display = "none"
+  })
+ name.textContent = logedUser.name
+ email.textContent = logedUser.email
+ number.textContent = logedUser.phone
+}else{
+  console.log("No")
+}
+
+
+// logout out 
+
+let logout = document.querySelector("#logout")
+
+logout.addEventListener("click",()=>{
+    localStorage.removeItem('loged-user');
+    location.reload()
+})
+
+
+
+let userInfoBtn = document.querySelector("#dropdownMenuUser")
+let userDiv = document.querySelector("#user-div")
+let btnClose = document.querySelector("#btn-close")
+
+
+userInfoBtn.addEventListener("click",()=>{
+    userDiv.style.display = "block"
+    
+})
+
+btnClose.addEventListener("click",()=>{
+    userDiv.style.display = "none"
 })
