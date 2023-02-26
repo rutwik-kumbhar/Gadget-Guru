@@ -92,3 +92,6 @@ function Display(cart) {
 }
 // book btn
 let bookBtn = documt.getElementById("book");
+bookBtn.addEventListener("click", function () {
+  window.location.href = "./";
+});
