@@ -3,7 +3,7 @@ let dataArray = [];
 let paginationData = [];
 let categoryData = [];
 let Page = 1;
-let ApiUrl=`https://audio-api-vw3a.onrender.com/Audio`
+let ApiUrl = `https://audio-api-vw3a.onrender.com/Audio`;
 
 fetch(`${ApiUrl}`)
   .then((request) => {
@@ -11,12 +11,9 @@ fetch(`${ApiUrl}`)
   })
   .then((data) => {
     dataArray = data;
-    paginationData=data
-    display(data)
-   
+    paginationData = data;
+    display(data);
   });
-
-
 
 function display(data) {
   apiProduct.innerHTML = "";
@@ -53,18 +50,14 @@ function getCard(id, name, price, description, image) {
   return card;
 }
 
-
-
 function getButton(text, id) {
   return `<button class="pagination-btn" data-page-Number=${id}>${text}</button>`;
 }
 
 let GO = document.querySelector(".GO");
 let min = document.querySelector(".min");
-  let max = document.querySelector(".max");
+let max = document.querySelector(".max");
 GO.addEventListener("click", function () {
-  
-
   if (min && max) {
     let filterData = paginationData.filter((el) => {
       if (el.price >= +min.value && el.price <= +max.value) {
@@ -103,16 +96,15 @@ Headpone.addEventListener("change", function () {
         return true;
       }
     });
-   
-   display(filterData);
-    
+
+    display(filterData);
+
     product.innerText = Headpone.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
   }
 });
-
 
 let Oppo = document.getElementById("Oppo");
 
@@ -150,7 +142,7 @@ Sony.addEventListener("change", function () {
   }
 });
 
-let Boat= document.getElementById("Boat");
+let Boat = document.getElementById("Boat");
 
 Boat.addEventListener("change", function () {
   if (this.checked) {
@@ -186,7 +178,7 @@ Mivi.addEventListener("change", function () {
   }
 });
 
-let JBL=document.getElementById("JBL")
+let JBL = document.getElementById("JBL");
 
 JBL.addEventListener("change", function () {
   if (this.checked) {
@@ -204,7 +196,7 @@ JBL.addEventListener("change", function () {
   }
 });
 
-let Realme=document.getElementById("Realme")
+let Realme = document.getElementById("Realme");
 
 Realme.addEventListener("change", function () {
   if (this.checked) {
@@ -222,7 +214,7 @@ Realme.addEventListener("change", function () {
   }
 });
 
-let Google=document.getElementById("Google")
+let Google = document.getElementById("Google");
 
 Google.addEventListener("change", function () {
   if (this.checked) {
@@ -240,7 +232,7 @@ Google.addEventListener("change", function () {
   }
 });
 
-let Noise=document.getElementById("Noise")
+let Noise = document.getElementById("Noise");
 
 Noise.addEventListener("change", function () {
   if (this.checked) {
@@ -258,7 +250,7 @@ Noise.addEventListener("change", function () {
   }
 });
 
-let PTron=document.getElementById("PTron")
+let PTron = document.getElementById("PTron");
 
 PTron.addEventListener("change", function () {
   if (this.checked) {
@@ -306,8 +298,8 @@ desc.addEventListener("click", function () {
   display(paginationData);
 });
 // ADD to cart functionality
-
-let cartarr = JSON.parse(localStorage.getItem("cart")) || [];
+let logedUser = JSON.parse(localStorage.getItem("loged-user")) || {};
+let cartarr = JSON.parse(localStorage.getItem(`${logedUser.name}-cart`)) || [];
 setTimeout(() => {
   let addToCart = document.querySelectorAll(".AddToCart");
 
@@ -324,12 +316,24 @@ function btnClicked(Btn) {
 
 function addToCart(Btn) {
   for (let i = 0; i < dataArray.length; i++) {
-    if (dataArray[i].id == Btn && checkProduct(dataArray[i])) {
+    if (
+      dataArray[i].id == Btn &&
+      checkProduct(dataArray[i]) &&
+      checkUserLoging()
+    ) {
       cartarr.push({ ...dataArray[i], quantity: 1 });
-      localStorage.setItem("cart", JSON.stringify(cartarr));
+      localStorage.setItem(`${logedUser.name}-cart`, JSON.stringify(cartarr));
       alert("Product Added To The Cart");
       break;
     }
+  }
+}
+
+function checkUserLoging() {
+  if (logedUser.name) {
+    return true;
+  } else {
+    alert("First Login on Website");
   }
 }
 
@@ -343,21 +347,62 @@ function checkProduct(element) {
   return true;
 }
 
-
 //////////////range//////////////////////////////////
 
-let range=document.getElementById("volume")
-let rangeMin=document.querySelector(".rangeMin")
+let range = document.getElementById("volume");
+let rangeMin = document.querySelector(".rangeMin");
 
-range.addEventListener("change",function(){
+range.addEventListener("change", function () {
   let filterData = dataArray.filter((el) => {
-    if (el.price>=700  && el.price<=range.value) {
+    if (el.price >= 700 && el.price <= range.value) {
       return true;
     }
   });
 
   display(filterData);
 
-   rangeMin.innerText=`₹${range.value}`
-  
-})
+  rangeMin.innerText = `₹${range.value}`;
+});
+
+// user login checked
+let userInfo = document.querySelectorAll(".user-info");
+let navBtns = document.querySelectorAll(".nav-btns");
+
+let name = document.querySelector("#name");
+let email = document.querySelector("#email");
+let number = document.querySelector("#no");
+
+if (logedUser.name) {
+  userInfo.forEach((el) => {
+    el.style.display = "block";
+  });
+  navBtns.forEach((el) => {
+    el.style.display = "none";
+  });
+  name.textContent = logedUser.name;
+  email.textContent = logedUser.email;
+  number.textContent = logedUser.phone;
+} else {
+  console.log("No");
+}
+
+// logout out
+
+let logout = document.querySelector("#logout");
+
+logout.addEventListener("click", () => {
+  localStorage.removeItem("loged-user");
+  location.reload();
+});
+
+let userInfoBtn = document.querySelector("#dropdownMenuUser");
+let userDiv = document.querySelector("#user-div");
+let btnClose = document.querySelector("#btn-close");
+
+userInfoBtn.addEventListener("click", () => {
+  userDiv.style.display = "block";
+});
+
+btnClose.addEventListener("click", () => {
+  userDiv.style.display = "none";
+});
