@@ -8,6 +8,7 @@
     box-sizing: border-box;
 }
 .btnlog{
+    margin-top: -30px;
     border: none;
     background-color: #dc3545;
 }
