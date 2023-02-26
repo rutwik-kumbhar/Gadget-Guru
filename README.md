@@ -10,8 +10,10 @@ especially for electronics stuff,It's clone of [Relaince digital](https://www.re
 [Rutwik Kumbhar(Team Leader)](https://github.com/rutwik-kumbhar)   
 [Krishna Kumar](https://github.com/Krishu7827)       
 [Yogita](https://github.com/Yogita2021)  
-[Pratyush Sharma](https://github.com/starboy1010)
+[Pratyush Sharma](https://github.com/starboy1010)    
 [Shivbushan](https://github.com/shivpatil370)
+
+
 
 ## 🛠 Tools
 1. Javascript    
