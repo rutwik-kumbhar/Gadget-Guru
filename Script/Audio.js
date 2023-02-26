@@ -3,7 +3,7 @@ let dataArray = [];
 let paginationData = [];
 let categoryData = [];
 let Page = 1;
-let ApiUrl=`https://teleapi.onrender.com/Television`
+let ApiUrl=`https://audio-api-vw3a.onrender.com/Audio`
 
 fetch(`${ApiUrl}`)
   .then((request) => {
@@ -77,17 +77,17 @@ GO.addEventListener("click", function () {
 
 let product = document.querySelector(".titleproduct");
 
-let Cable = document.getElementById("Cable&Cards");
+let speaker = document.getElementById("speaker");
 
-Cable.addEventListener("change", function () {
+speaker.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.category == Cable.value) {
+      if (el.category == speaker.value) {
         return true;
       }
     });
     display(filterData);
-    product.innerText = Cable.value;
+    product.innerText = speaker.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
@@ -103,12 +103,9 @@ Headpone.addEventListener("change", function () {
         return true;
       }
     });
-    if(filterData[0]==undefined){
-      apiProduct.innerHTML=`<h2 style="text-align:center;">OOps!! ${Headpone.value} is not available</h2>`
-      
-    }else{
+   
    display(filterData);
-    }
+    
     product.innerText = Headpone.value;
   } else {
     display(paginationData);
@@ -116,125 +113,163 @@ Headpone.addEventListener("change", function () {
   }
 });
 
-let Television = document.getElementById("Television");
 
-Television.addEventListener("change", function () {
+let Oppo = document.getElementById("Oppo");
+
+Oppo.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.category == Television.value) {
+      if (el.name == Oppo.value) {
         return true;
       }
     });
     display(filterData);
-    product.innerText = Television.value;
+
+    product.innerText = Oppo.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
   }
 });
 
-let Computer = document.getElementById("Computer");
+let Sony = document.getElementById("Sony");
 
-Computer.addEventListener("change", function () {
+Sony.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.category == Computer.value) {
+      if (el.name == Sony.value) {
         return true;
       }
     });
     display(filterData);
 
-    product.innerText = Computer.value;
+    product.innerText = Sony.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
   }
 });
 
-let LG = document.getElementById("LG");
+let Boat= document.getElementById("Boat");
 
-LG.addEventListener("change", function () {
+Boat.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.name == LG.value) {
+      if (el.name == Boat.value) {
         return true;
       }
     });
     display(filterData);
 
-    product.innerText = LG.value;
+    product.innerText = Boat.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
   }
 });
 
-let Hisense = document.getElementById("Hisense");
+let Mivi = document.getElementById("Mivi");
 
-Hisense.addEventListener("change", function () {
+Mivi.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.name == Hisense.value) {
+      if (el.name == Mivi.value) {
         return true;
       }
     });
     display(filterData);
 
-    product.innerText = Hisense.value;
+    product.innerText = Mivi.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
   }
 });
 
-let TCL= document.getElementById("TCL");
+let JBL=document.getElementById("JBL")
 
-TCL.addEventListener("change", function () {
+JBL.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.name == TCL.value) {
+      if (el.name == JBL.value) {
         return true;
       }
     });
     display(filterData);
 
-    product.innerText = TCL.value;
+    product.innerText = JBL.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
   }
 });
 
-let IFFALCON = document.getElementById("IFFALCON");
+let Realme=document.getElementById("Realme")
 
-IFFALCON.addEventListener("change", function () {
+Realme.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.name == IFFALCON.value) {
+      if (el.name == Realme.value) {
         return true;
       }
     });
     display(filterData);
 
-    product.innerText = IFFALCON.value;
+    product.innerText = Realme.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
   }
 });
 
-let Toshiba=document.getElementById("Toshiba")
+let Google=document.getElementById("Google")
 
-Toshiba.addEventListener("change", function () {
+Google.addEventListener("change", function () {
   if (this.checked) {
     let filterData = dataArray.filter((el) => {
-      if (el.name == Toshiba.value) {
+      if (el.name == Google.value) {
         return true;
       }
     });
     display(filterData);
 
-    product.innerText = Toshiba.value;
+    product.innerText = Google.value;
+  } else {
+    display(paginationData);
+    product.innerText = "Product";
+  }
+});
+
+let Noise=document.getElementById("Noise")
+
+Noise.addEventListener("change", function () {
+  if (this.checked) {
+    let filterData = dataArray.filter((el) => {
+      if (el.name == Noise.value) {
+        return true;
+      }
+    });
+    display(filterData);
+
+    product.innerText = Noise.value;
+  } else {
+    display(paginationData);
+    product.innerText = "Product";
+  }
+});
+
+let PTron=document.getElementById("PTron")
+
+PTron.addEventListener("change", function () {
+  if (this.checked) {
+    let filterData = dataArray.filter((el) => {
+      if (el.name == PTron.value) {
+        return true;
+      }
+    });
+    display(filterData);
+
+    product.innerText = PTron.value;
   } else {
     display(paginationData);
     product.innerText = "Product";
@@ -316,7 +351,7 @@ let rangeMin=document.querySelector(".rangeMin")
 
 range.addEventListener("change",function(){
   let filterData = dataArray.filter((el) => {
-    if (el.price>=15000  && el.price<=range.value) {
+    if (el.price>=700  && el.price<=range.value) {
       return true;
     }
   });
