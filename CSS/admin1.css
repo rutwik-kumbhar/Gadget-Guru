@@ -206,7 +206,7 @@
     display: none;
 }
 
-#television,#Audio{
+#smart,#Audio{
     background-color: #5dbea3;
     padding: 6px 9px;
     color: white;
@@ -214,10 +214,10 @@
     margin: 5px;
 }
 
-#television:hover,#Audio:hover{
+#smart:hover,#Audio:hover{
     background-color: #33b249;
 }
 
-#television:active,#Audio:active{
+#smart:active,#Audio:active{
     background-color: black;
 }

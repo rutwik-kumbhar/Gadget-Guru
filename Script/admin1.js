@@ -1,8 +1,8 @@
 
 let data = [];
 // ///////////////////////////////////////////////////////////////////////////////
-let url1="https://mockapi-nr5i.onrender.com/Smartphones";
 
+let url1="https://teleapi.onrender.com/Television";
 
 fetchData()
 
@@ -180,10 +180,11 @@ async function deleteData(id) {
    });
 
 
-document.querySelector("#television").addEventListener("click",function(){
-        window.location.assign("admin1.html");
+
+   document.querySelector("#smart").addEventListener("click",function(){
+    window.location.assign("admin.html");
 })
 
 document.querySelector("#Audio").addEventListener("click",function(){
-  window.location.assign("admin2.html");
+window.location.assign("admin2.html");
 })
