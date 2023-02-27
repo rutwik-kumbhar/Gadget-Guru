@@ -91,10 +91,10 @@ function Display(cart) {
   }
 }
 // book btn
-// let bookBtn = document.getElementById("book");
-// bookBtn.addEventListener("click", function () {
-//   window.location.href = "./";
-// });
+let bookBtn = document.getElementById("book");
+bookBtn.addEventListener("click", function () {
+  location.href = "./pay.html";
+});
 //////////// nav-bar js part////////////
 let usersData = JSON.parse(localStorage.getItem("users")) || [];
 // let logedUser = JSON.parse(localStorage.getItem("loged-user")) || {};
@@ -190,6 +190,7 @@ loginUser();
 let userInfoBtn = document.querySelector("#dropdownMenuUser");
 let userDiv = document.querySelector("#user-div");
 let btnClose = document.querySelector("#btn-close");
+// let buynow = document.querySelector("#book")
 
 userInfoBtn.addEventListener("click", () => {
   userDiv.style.display = "block";
@@ -198,3 +199,10 @@ userInfoBtn.addEventListener("click", () => {
 btnClose.addEventListener("click", () => {
   userDiv.style.display = "none";
 });
+
+// buynow.addEventListener("click", () => {
+//   window.location="../HTML/pay.html"
+// });
+// document.getElementById("book").onclick = function () {
+//   location.href = "../HTML/pay.html";
+// };
