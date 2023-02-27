@@ -35,19 +35,19 @@ especially for electronics stuff,It's clone of [Relaince digital](https://www.re
 5. Admin Side
 6. Payment Page
 
-## Role in the website
+## 👩‍🚒Role in the website 
 1. Rutwik Kumbhar(Home Page)
 2. Krishna Kumar(Product Page)
 3. Yogita (Cart Page)
 4. Pratyush(Payment Page)
 5. Shivbushan(Admin Side)
 
-## API  🔗
+## 🔗API  
 [Smartphones API](https://mockapi-nr5i.onrender.com/Smartphones)     
 [Audio API](https://audio-api-vw3a.onrender.com/Audio)    
 [Television API](https://teleapi.onrender.com/Television)
 
-## FAQ
+## FAQ 
 
 #### is it responsing or not ??
 Yes, It's totally responsive
