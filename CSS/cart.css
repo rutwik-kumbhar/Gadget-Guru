@@ -128,7 +128,7 @@
   padding: 20px;
   position: sticky;
   top: 50px;
-  z-index: -50;
+  /* z-index: -50; */
   margin-right: 20px;
 }
 .child {
@@ -163,11 +163,10 @@
   margin-left: 30px;
   font-family: "Poppins", sans-serif;
 }
-#book {
+#book-product {
   margin-top: 30px;
   margin-right: 70px;
   margin-left: 90px;
-
   padding: 20px 40px 20px 40px;
   background-color: red;
   border-radius: 5px;
@@ -175,7 +174,7 @@
   color: white;
   border: none;
 }
-#book:hover {
+#book-product:hover {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   cursor: pointer;
