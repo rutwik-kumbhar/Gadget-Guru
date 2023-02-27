@@ -91,10 +91,14 @@ function Display(cart) {
   }
 }
 // book btn
-let bookBtn = document.getElementById("book");
-bookBtn.addEventListener("click", function () {
-  location.href = "./pay.html";
-});
+
+let book_product = document.querySelector("#book-product");
+console.log(book_product)
+book_product.addEventListener("click",()=>{
+    location.href = "/HTML/pay.html"
+
+})
+
 //////////// nav-bar js part////////////
 let usersData = JSON.parse(localStorage.getItem("users")) || [];
 // let logedUser = JSON.parse(localStorage.getItem("loged-user")) || {};
