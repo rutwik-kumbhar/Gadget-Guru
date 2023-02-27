@@ -21,7 +21,7 @@ especially for electronics stuff,It's clone of [Relaince digital](https://www.re
 [Shivbushan](https://github.com/shivpatil370)
 
 ## 🛠 Tools
-1. Jav   
+1. Javascript
 2. Bootstrap    
 3. DOM    
 4. HTML
