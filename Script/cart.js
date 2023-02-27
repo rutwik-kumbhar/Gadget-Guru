@@ -46,19 +46,20 @@ function Display(cart) {
       Cart = Cart.filter((ele) => {
         return ele.id !== element.id;
       });
-      localStorage.setItem("cart", JSON.stringify(Cart));
+      localStorage.setItem(`${logedUser.name}-cart`, JSON.stringify(Cart));
+      cartCount.textContent = Cart.length
       Display();
     });
 
     Increment.addEventListener("click", () => {
       element = element.quantity++;
-      localStorage.setItem("cart", JSON.stringify(Cart));
+      localStorage.setItem(`${logedUser.name}-cart`, JSON.stringify(Cart));
       Display();
     });
     decrement.addEventListener("click", () => {
       if (element.quantity > 1) {
         element = element.quantity--;
-        localStorage.setItem("cart", JSON.stringify(Cart));
+        localStorage.setItem(`${logedUser.name}-cart`, JSON.stringify(Cart));
         Display();
       }
     });
@@ -95,11 +96,14 @@ bookBtn.addEventListener("click", function () {
   location.href = "./pay.html";
 });
 //////////// nav-bar js part////////////
-// let usersData = JSON.parse(localStorage.getItem("users")) || [];
+let usersData = JSON.parse(localStorage.getItem("users")) || [];
 // let logedUser = JSON.parse(localStorage.getItem("loged-user")) || {};
 
 let userInfo = document.querySelectorAll(".user-info");
 let navBtns = document.querySelectorAll(".nav-btns");
+
+let navbarBtns = document.querySelector("#navabar-btns")
+console.log(navbarBtns)
 
 let name = document.querySelector("#name");
 let email = document.querySelector("#email");
@@ -120,11 +124,12 @@ if (logedUser.name) {
     el.style.display = "none";
   });
   name.textContent = logedUser.name;
-  userName.textContent = logedUser.name;
+  userName.textContent = `Hi, ${logedUser.name.substr(0,6)}`
   email.textContent = logedUser.email;
   number.textContent = logedUser.phone;
+  navbarBtns.style.marginLeft = "32%"
 } else {
-  console.log("No");
+  navbarBtns.style.marginLeft = "43%"
 }
 
 getUserData();

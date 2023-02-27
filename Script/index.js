@@ -59,7 +59,7 @@ function getUserData(){
         console.log(formData)
         let signin = document.querySelector("#signin-modal")
         signin.setAttribute("data-bs-dismiss",'modal')
-        alert("Account Created");
+        alert("Account Created Successfully");
     })
     
 
@@ -84,7 +84,7 @@ function loginUser(){
             }
          }
          if(login){
-            alert("Successs");
+            alert("Login Succesfull");
             userInfo.forEach((el)=>{
                 el.style.display = "block"
             })
@@ -93,7 +93,7 @@ function loginUser(){
             })
             location.reload()
         }else{
-            alert("wrong credential")
+            alert("Wrong Credential")
         }
        
     })

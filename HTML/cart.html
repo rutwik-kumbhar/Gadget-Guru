@@ -33,45 +33,29 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
   <!------------------------------ Navbar Strated Here ------------------------------->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-        <div class="container-fluid">
-            <a class="navbar-brand" style="margin-right:16%;" href="../index.html"><img src="../logo-removebg.png"
-                    style="width:120px ;height: 65px;" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div id="search-div">
-                    <form class="d-flex" style="margin-right:300px;">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-primary" style="color: white;" type="submit">Search</button>
-                    </form>
-                </div>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item" id="cart">
-                        <a href="./cart.html" style="text-decoration: none;"><button class="btn btn-primary mx-1 user-info"> <i class="fa-solid fa-cart-shopping"></i> Cart
-                         <span class="badge bg-success" id="cart-count">5</span></button></a>
-                     </li>
-                    <li class="nav-item">
-                        <button class="btn btn-primary mx-1 user-info  dropdown-toggle" id="dropdownMenuUser"><i
-                                class="fa-solid fa-user"></i> <span id="user-name"></span> 
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn btn-primary mx-1 nav-btns" data-bs-toggle="modal"
-                            data-bs-target="#loginModal">Login</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn btn-primary mx-1 nav-btns" data-bs-toggle="modal"
-                            data-bs-target="#signinModal">Signin</button>
-                    </li>
-                </ul>
             </div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navabar-btns">
+                <li class="nav-item" id="cart">
+                    <a href="./cart.html" style="text-decoration: none;"><button class="btn btn-primary mx-1 user-info"> <i class="fa-solid fa-cart-shopping"></i> Cart
+                     <span class="badge bg-success" id="cart-count">5</span></button></a>
+                 </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary mx-1 user-info  dropdown-toggle" id="dropdownMenuUser"><i
+                            class="fa-solid fa-user"></i> <span id="user-name"></span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary mx-1 nav-btns" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary mx-1 nav-btns" data-bs-toggle="modal"
+                        data-bs-target="#signinModal">Signin</button>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- User Info  Modal started -->
 <div id="user-div">
